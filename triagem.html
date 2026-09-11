@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Você está segura?</title>
+
+    <link
+        rel="stylesheet"
+        href="triagem.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="triagem">
+
+        <h1>Você está segura?</h1>
+
+        <p>
+            Responda algumas perguntas para que possamos
+            indicar o melhor caminho para você.
+        </p>
+
+
+        <form id="form-triagem">
+
+
+            <!-- PERGUNTA 1 -->
+
+            <div class="pergunta">
+
+                <p>
+                    Você está sofrendo ameaças,
+                    agressões ou sendo intimidada?
+                </p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="violencia"
+                        value="sim"
+                        required
+                    >
+                    Sim
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="violencia"
+                        value="nao"
+                    >
+                    Não
+                </label>
+
+            </div>
+
+
+            <!-- PERGUNTA 2 -->
+
+            <div class="pergunta">
+
+                <p>
+                    Você tem medo de alguém neste momento?
+                </p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="medo"
+                        value="sim"
+                        required
+                    >
+                    Sim
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="medo"
+                        value="nao"
+                    >
+                    Não
+                </label>
+
+            </div>
+
+
+            <!-- PERGUNTA 3 -->
+
+            <div class="pergunta">
+
+                <p>
+                    Alguém está controlando seu dinheiro,
+                    celular, contatos ou sua liberdade?
+                </p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="controle"
+                        value="sim"
+                        required
+                    >
+                    Sim
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="controle"
+                        value="nao"
+                    >
+                    Não
+                </label>
+
+            </div>
+
+
+            <!-- PERGUNTA 4 -->
+
+            <div class="pergunta">
+
+                <p>
+                    Você se identificou com algum dos tipos
+                    de violência que citamos?
+                </p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="identificacao"
+                        value="sim"
+                        required
+                    >
+                    Sim
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="identificacao"
+                        value="nao"
+                    >
+                    Não
+                </label>
+
+            </div>
+
+
+            <!-- PERGUNTA 5 -->
+
+            <div class="pergunta">
+
+                <p>
+                    Você já pensou que precisa esconder
+                    coisas ou mentir para evitar uma briga?
+                </p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="esconder"
+                        value="sim"
+                        required
+                    >
+                    Sim
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="esconder"
+                        value="nao"
+                    >
+                    Não
+                </label>
+
+            </div>
+
+
+            <!-- PERGUNTA 6 -->
+
+            <div class="pergunta">
+
+                <p>
+                    Você sente que precisa tomar cuidado
+                    com o que fala ou faz para evitar
+                    uma reação agressiva?
+                </p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="cuidado"
+                        value="sim"
+                        required
+                    >
+                    Sim
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="cuidado"
+                        value="nao"
+                    >
+                    Não
+                </label>
+
+            </div>
+
+
+            <!-- PERGUNTA 7 -->
+
+            <div class="pergunta">
+
+                <p>
+                    A pessoa com quem você se relaciona
+                    costuma culpar você pelos problemas
+                    do relacionamento?
+                </p>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="culpa"
+                        value="sim"
+                        required
+                    >
+                    Sim
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="culpa"
+                        value="nao"
+                    >
+                    Não
+                </label>
+
+            </div>
+
+
+            <!-- BOTÃO -->
+
+            <button type="submit">
+                Continuar
+            </button>
+
+
+        </form>
+
+    </main>
+
+
+    <script src="triagem.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Criar conta</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+
+        <!-- LADO DIREITO -->
+        <section class="lado-direito">
+
+            <div class="formulario">
+
+                <h1>MARIAS</h1>
+
+                <h2>Criar conta</h2>
+
+                <p class="subtitulo">
+                    Crie sua conta para continuar
+                </p>
+
+
+                <form id="formCadastro">
+
+                    <!-- EMAIL -->
+                    <div class="campo">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Digite seu e-mail"
+                        >
+
+                        <small id="erroEmail" class="erro"></small>
+
+                    </div>
+
+
+                    <!-- NOME DE USUÁRIO -->
+                    <div class="campo">
+
+                        <label for="usuario">
+                            Nome de usuário
+                        </label>
+
+                        <input
+                            type="text"
+                            id="usuario"
+                            placeholder="Escolha um nome de usuário"
+                        >
+
+                        <small id="erroUsuario" class="erro"></small>
+
+                    </div>
+
+
+                    <!-- SENHA -->
+                    <div class="campo">
+
+                        <label for="senha">
+                            Criar senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="senha"
+                            placeholder="Crie uma senha"
+                        >
+
+                        <small id="erroSenha" class="erro"></small>
+
+                    </div>
+
+
+                    <!-- CONFIRMAR SENHA -->
+                    <div class="campo">
+
+                        <label for="confirmarSenha">
+                            Confirmar senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmarSenha"
+                            placeholder="Digite a senha novamente"
+                        >
+
+                        <small id="erroConfirmarSenha" class="erro"></small>
+
+                    </div>
+
+
+                  <!-- GÊNERO -->
+                  <div class="campo">
+
+                        <label>
+                            Você é:
+                        </label>
+
+                        <div class="opcoes-genero">
+
+                          <input
+                                type="radio"
+                                name="genero"
+                                value="mulher"
+                                id="mulher">
+
+                            <label for="mulher">
+                                Mulher
+                            </label>
+
+                           
+                        <input
+                                type="radio"
+                                name="genero"
+                                value="homem"
+                                id="homem">
+
+                            <label for="homem">
+                                Homem
+                            </label>
+
+                        </div>
+
+                        <small id="erroGenero" class="erro"></small>
+
+                    </div>
+
+                    <!-- TERMOS -->
+                    <div class="termos">
+
+                        <input
+                            type="checkbox"
+                            id="termos"
+                        >
+
+                        <label for="termos">
+                            Concordo com os termos e condições
+                        </label>
+
+                    </div>
+
+                    <small id="erroTermos" class="erro"></small>
+
+
+                    <!-- BOTÃO -->
+                    <button
+                        type="submit"
+                        class="botao"
+                    >
+                        Criar minha conta
+                    </button>
+
+                </form>
+
+
+                <!-- IR PARA LOGIN -->
+                <p class="login">
+
+                    Já possui uma conta?
+
+                    <a href="login.html">
+                        Entrar agora
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="login.js"></script>
+
+
+</body>
+
+</html>

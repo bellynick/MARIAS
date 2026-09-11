@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Nise da Silveira</title>
+
+    <link rel="stylesheet" href="historias.css">
+
+</head>
+
+
+<body>
+
+    <main class="pagina">
+
+        <div class="conteudo">
+
+            <header class="cabecalho">
+
+                <div>
+                    <h1>Nise da Silveira</h1>
+                    <p>Uma história para conhecer</p>
+                </div>
+
+            </header>
+
+
+            <section class="historia">
+
+                <!-- IMAGEM -->
+
+                <div class="lado-imagem">
+
+                    <div class="imagem-container">
+
+                        <img
+                            id="imagemHistoria"
+                            src="https://i.pinimg.com/736x/ce/1a/f2/ce1af28389804c57ab96b2747dfdc4ed.jpg"
+                            alt="Nise da Silveira"
+                        >
+
+
+                        <div class="indicadores">
+
+                            <span class="ponto ativo"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TEXTO -->
+
+                <div class="texto-historia">
+
+                    <div
+                        class="numero"
+                        id="numeroSlide"
+                    >
+                        01 / 05
+                    </div>
+
+
+                    <h2 id="tituloHistoria">
+                        Quem foi Nise da Silveira?
+                    </h2>
+
+
+                    <p id="textoHistoria">
+                        Nise da Silveira foi uma médica psiquiatra
+                        brasileira que revolucionou o tratamento de
+                        pessoas com transtornos mentais no Brasil.
+                    </p>
+
+
+                    <p id="textoHistoria2">
+                        Nascida em Maceió, em 1905, foi a única mulher
+                        em uma turma de 157 homens na Faculdade de
+                        Medicina da Bahia.
+                    </p>
+
+
+                    <div class="informacao">
+
+                        <strong id="destaque">
+                            Uma mulher pioneira
+                        </strong>
+
+                        <p id="textoDestaque">
+                            Nise enfrentou diversos obstáculos em uma
+                            área dominada por homens e construiu uma
+                            trajetória marcada pela inovação.
+                        </p>
+
+                    </div>
+
+
+                    <div class="controles">
+
+                        <button
+                            class="botao-anterior"
+                            onclick="voltarSlide()"
+                        >
+                            ← Anterior
+                        </button>
+
+
+                        <button
+                            class="botao-proximo"
+                            onclick="proximoSlide()"
+                        >
+                            Próximo →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="barra-navegacao">
+
+            <a
+                href="historias.html"
+                class="nav-item ativo"
+            >
+                <span>⌂</span>
+                <small>Início</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>⌕</span>
+                <small>Buscar</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="botao-central"
+            >
+                +
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>♡</span>
+                <small>Favoritos</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>☰</span>
+                <small>Sobre</small>
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const slides = [
+
+            {
+                imagem:
+                    "https://i.pinimg.com/736x/ce/1a/f2/ce1af28389804c57ab96b2747dfdc4ed.jpg",
+
+                titulo:
+                    "Quem foi Nise da Silveira?",
+
+                texto:
+                    "Nise da Silveira foi uma médica psiquiatra brasileira que revolucionou o tratamento de pessoas com transtornos mentais no Brasil.",
+
+                texto2:
+                    "Nascida em Maceió, em 1905, foi a única mulher em uma turma de 157 homens na Faculdade de Medicina da Bahia.",
+
+                destaque:
+                    "Uma mulher pioneira",
+
+                textoDestaque:
+                    "Nise enfrentou diversos obstáculos em uma área dominada por homens e construiu uma trajetória marcada pela inovação."
+            },
+
+
+            {
+                imagem:
+                    "https://i.pinimg.com/736x/ce/1a/f2/ce1af28389804c57ab96b2747dfdc4ed.jpg",
+
+                titulo:
+                    "Contra os métodos agressivos",
+
+                texto:
+                    "Durante sua carreira, Nise se posicionou contra métodos agressivos utilizados na psiquiatria de sua época, como o eletrochoque e a lobotomia.",
+
+                texto2:
+                    "Ela acreditava que os pacientes deveriam ser tratados com respeito, afeto e compreensão, em vez de serem submetidos a procedimentos violentos.",
+
+                destaque:
+                    "Uma nova maneira de cuidar",
+
+                textoDestaque:
+                    "Sua resistência aos tratamentos agressivos marcou uma importante mudança na maneira de pensar o cuidado em saúde mental."
+            },
+
+
+            {
+                imagem:
+                    "https://i.pinimg.com/736x/ce/1a/f2/ce1af28389804c57ab96b2747dfdc4ed.jpg",
+
+                titulo:
+                    "A arte como tratamento",
+
+                texto:
+                    "Nise transformou a terapia ocupacional em um espaço de criação artística e valorização dos pacientes.",
+
+                texto2:
+                    "Ela percebeu que pinturas, esculturas e outras formas de expressão poderiam revelar aspectos importantes do mundo interno das pessoas.",
+
+                destaque:
+                    "Museu de Imagens do Inconsciente",
+
+                textoDestaque:
+                    "Em 1952, Nise fundou o Museu de Imagens do Inconsciente, reunindo produções artísticas realizadas por seus pacientes."
+            },
+
+
+            {
+                imagem:
+                    "https://i.pinimg.com/736x/ce/1a/f2/ce1af28389804c57ab96b2747dfdc4ed.jpg",
+
+                titulo:
+                    "Jung e os animais",
+
+                texto:
+                    "Nise da Silveira estudou as ideias do psiquiatra Carl Jung e ajudou a difundir a psicologia junguiana no Brasil.",
+
+                texto2:
+                    "Em 1957, apresentou trabalhos de seus pacientes a Jung, em Zurique. Ela também valorizava a presença de animais, especialmente gatos, na relação afetiva com os pacientes.",
+
+                destaque:
+                    "Afeto e cuidado",
+
+                textoDestaque:
+                    "Para Nise, a relação afetiva poderia desempenhar um papel importante no processo de cuidado e recuperação."
+            },
+
+
+            {
+                imagem:
+                    "https://i.pinimg.com/736x/ce/1a/f2/ce1af28389804c57ab96b2747dfdc4ed.jpg",
+
+                titulo:
+                    "O legado de Nise da Silveira",
+
+                texto:
+                    "Nise da Silveira morreu em 1999, mas suas ideias continuam influenciando a forma de pensar a saúde mental e a terapia ocupacional.",
+
+                texto2:
+                    "Seu trabalho mostrou a importância da arte, da criatividade, do afeto e do respeito à individualidade no cuidado com pessoas em sofrimento psíquico.",
+
+                destaque:
+                    "Um legado de humanidade",
+
+                textoDestaque:
+                    "Nise deixou uma importante contribuição para uma abordagem mais humana e respeitosa no tratamento em saúde mental."
+            }
+
+        ];
+
+
+        let slideAtual = 0;
+
+
+        const numero =
+            document.getElementById("numeroSlide");
+
+        const titulo =
+            document.getElementById("tituloHistoria");
+
+        const texto =
+            document.getElementById("textoHistoria");
+
+        const texto2 =
+            document.getElementById("textoHistoria2");
+
+        const destaque =
+            document.getElementById("destaque");
+
+        const textoDestaque =
+            document.getElementById("textoDestaque");
+
+        const pontos =
+            document.querySelectorAll(".ponto");
+
+
+        function mostrarSlide(indice) {
+
+            slideAtual =
+                (indice + slides.length) % slides.length;
+
+
+            const slide =
+                slides[slideAtual];
+
+
+            imagem.style.opacity = "0";
+
+
+            setTimeout(() => {
+
+                imagem.src = slide.imagem;
+
+                imagem.alt = slide.titulo;
+
+                imagem.style.opacity = "1";
+
+            }, 250);
+
+
+            numero.textContent =
+                "0" +
+                (slideAtual + 1) +
+                " / 0" +
+                slides.length;
+
+
+            titulo.textContent =
+                slide.titulo;
+
+
+            texto.textContent =
+                slide.texto;
+
+
+            texto2.textContent =
+                slide.texto2;
+
+
+            destaque.textContent =
+                slide.destaque;
+
+
+            textoDestaque.textContent =
+                slide.textoDestaque;
+
+
+            pontos.forEach((ponto, index) => {
+
+                ponto.classList.toggle(
+                    "ativo",
+                    index === slideAtual
+                );
+
+            });
+
+        }
+
+
+        function proximoSlide() {
+
+            mostrarSlide(
+                slideAtual + 1
+            );
+
+        }
+
+
+        function voltarSlide() {
+
+            mostrarSlide(
+                slideAtual - 1
+            );
+
+        }
+
+
+        /* TROCA AUTOMÁTICA A CADA 7 SEGUNDOS */
+
+        setInterval(() => {
+
+            proximoSlide();
+
+        }, 7000);
+
+    </script>
+
+</body>
+
+</html>

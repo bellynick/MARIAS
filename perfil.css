@@ -1,0 +1,977 @@
+/* =========================================================
+   PROJETO MARIAS — PERFIL / CONTA
+   PALETA OFICIAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================= */
+/* BODY */
+/* ========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(200, 154, 160, 0.22),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(166, 77, 90, 0.12),
+            transparent 30%
+        ),
+        #F3EDE0;
+
+    color: #2B2B2B;
+
+    padding-bottom: 110px;
+}
+
+
+/* ========================= */
+/* PÁGINA */
+/* ========================= */
+
+.pagina {
+    min-height: 100vh;
+
+    padding-bottom: 110px;
+}
+
+
+/* ========================= */
+/* CABEÇALHO */
+/* ========================= */
+
+.cabecalho {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 50px 30px 30px;
+}
+
+
+.cabecalho h1 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    margin-bottom: 8px;
+
+    color: #6D2D3A;
+
+    letter-spacing: 0.5px;
+}
+
+
+.cabecalho h1::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin-top: 10px;
+
+    background: #C8A25A;
+
+    border-radius: 10px;
+}
+
+
+.cabecalho p {
+    color: #6B625D;
+
+    font-size: 17px;
+
+    margin-top: 12px;
+}
+
+
+/* ========================= */
+/* CARD DE PERFIL */
+/* ========================= */
+
+.perfil-container {
+    width: 100%;
+}
+
+
+.perfil-card {
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    background:
+        linear-gradient(
+            145deg,
+            #F3EDE0,
+            #E9DDC8
+        );
+
+    border: 1px solid rgba(200, 162, 90, 0.30);
+
+    border-radius: 25px;
+
+    padding: 50px;
+
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    gap: 60px;
+
+    box-shadow:
+        0 15px 40px rgba(43, 43, 43, 0.12);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* detalhe decorativo */
+
+.perfil-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 10%;
+    right: 10%;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #C8A25A,
+            transparent
+        );
+}
+
+
+/* ========================= */
+/* FOTO */
+/* ========================= */
+
+.foto-area {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.foto-perfil {
+    width: 190px;
+    height: 190px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 6px solid #F3EDE0;
+
+    box-shadow:
+        0 0 0 2px #C8A25A,
+        0 8px 25px rgba(43, 43, 43, 0.18);
+}
+
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ========================= */
+/* BOTÃO AVATAR */
+/* ========================= */
+
+.botao-avatar {
+    margin-top: 22px;
+
+    border: 1px solid #C8A25A;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6D2D3A,
+            #832F42
+        );
+
+    color: #F3EDE0;
+
+    padding: 13px 22px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+
+.botao-avatar:hover {
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #A64D5A,
+            #6D2D3A
+        );
+
+    box-shadow:
+        0 6px 15px rgba(43, 43, 43, 0.18);
+}
+
+
+/* ========================= */
+/* INFORMAÇÕES */
+/* ========================= */
+
+.informacoes {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.campo {
+    margin-bottom: 25px;
+}
+
+
+.campo label {
+    display: block;
+
+    font-size: 13px;
+
+    color: #6D2D3A;
+
+    margin-bottom: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    font-weight: bold;
+}
+
+
+.valor {
+    background:
+        linear-gradient(
+            135deg,
+            #E5D7BD,
+            #F3EDE0
+        );
+
+    border: 1px solid rgba(200, 162, 90, 0.20);
+
+    border-radius: 12px;
+
+    padding: 17px;
+
+    font-size: 16px;
+
+    color: #3F3033;
+}
+
+
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
+
+.botao-senha,
+.botao-sair {
+    width: 100%;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    margin-top: 8px;
+
+    transition: 0.3s ease;
+}
+
+
+.botao-senha {
+    border: 1px solid #C8A25A;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6D2D3A,
+            #832F42
+        );
+
+    color: #F3EDE0;
+
+    font-weight: bold;
+}
+
+
+.botao-sair {
+    border: 1px solid #C89AA0;
+
+    background: #F3EDE0;
+
+    color: #6D2D3A;
+
+    font-weight: bold;
+}
+
+
+.botao-senha:hover,
+.botao-sair:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(43, 43, 43, 0.15);
+}
+
+
+.botao-senha:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #A64D5A,
+            #6D2D3A
+        );
+}
+
+
+.botao-sair:hover {
+    background: #EAD8DA;
+
+    border-color: #A64D5A;
+}
+
+
+/* ========================= */
+/* MODAL */
+/* ========================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(43, 43, 43, 0.70);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 100;
+}
+
+
+.modal.mostrar {
+    display: flex;
+}
+
+
+.modal-conteudo {
+    position: relative;
+
+    width: 90%;
+
+    max-width: 650px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #F3EDE0,
+            #E9DDC8
+        );
+
+    border: 1px solid #C8A25A;
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+
+.modal-conteudo h2 {
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+
+    color: #6D2D3A;
+}
+
+
+.modal-conteudo > p {
+    color: #6B625D;
+
+    margin-bottom: 30px;
+}
+
+
+/* ========================= */
+/* BOTÃO FECHAR */
+/* ========================= */
+
+.fechar {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    color: #6D2D3A;
+
+    transition: 0.2s;
+}
+
+
+.fechar:hover {
+    color: #A64D5A;
+
+    transform: scale(1.1);
+}
+
+
+/* ========================= */
+/* AVATARES */
+/* ========================= */
+
+.avatares {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.avatar {
+    border: 4px solid transparent;
+
+    background: #D8C8A9;
+
+    border-radius: 50%;
+
+    width: 140px;
+    height: 140px;
+
+    margin: auto;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.avatar:hover {
+    transform: scale(1.06);
+
+    border-color: #C8A25A;
+
+    box-shadow:
+        0 5px 15px rgba(109, 45, 58, 0.20);
+}
+
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ========================= */
+/* BARRA DE NAVEGAÇÃO */
+/* ========================= */
+
+.barra-navegacao {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 80px;
+
+    background:
+        linear-gradient(
+            to right,
+            #6D2D3A,
+            #832F42,
+            #6D2D3A
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 55px;
+
+    border-top: 2px solid #C8A25A;
+
+    box-shadow:
+        0 -5px 25px rgba(43, 43, 43, 0.18);
+
+    z-index: 50;
+}
+
+
+.nav-item {
+    text-decoration: none;
+
+    color: #D8C8A9;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    transition: 0.2s ease;
+}
+
+
+.nav-item span {
+    font-size: 23px;
+}
+
+
+.nav-item small {
+    font-size: 11px;
+
+    color: #F3EDE0;
+}
+
+
+.nav-item:hover,
+.nav-item.ativo {
+    color: #C8A25A;
+
+    transform: translateY(-2px);
+}
+
+
+.nav-item:hover small,
+.nav-item.ativo small {
+    color: #C8A25A;
+}
+
+
+/* ========================= */
+/* BOTÃO CENTRAL */
+/* ========================= */
+
+.botao-central {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #C89AA0,
+            #A64D5A
+        );
+
+    color: #F3EDE0;
+
+    text-decoration: none;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+    margin-top: -30px;
+
+    border: 3px solid #F3EDE0;
+
+    box-shadow:
+        0 5px 15px rgba(43, 43, 43, 0.25),
+        0 0 0 1px #C8A25A;
+
+    transition: 0.2s ease;
+}
+
+
+.botao-central:hover {
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #D0A5AA,
+            #A64D5A
+        );
+
+    box-shadow:
+        0 8px 20px rgba(43, 43, 43, 0.30),
+        0 0 0 2px #C8A25A;
+}
+
+
+/* ========================= */
+/* CONFIRMAÇÃO DE SAÍDA */
+/* ========================= */
+
+.confirmacao-sair {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background:
+        rgba(43, 43, 43, 0.72);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+}
+
+
+/* ========================= */
+/* CAIXA DE CONFIRMAÇÃO */
+/* ========================= */
+
+.caixa-confirmacao {
+    background:
+        linear-gradient(
+            145deg,
+            #F3EDE0,
+            #E9DDC8
+        );
+
+    border: 1px solid #C8A25A;
+
+    width: 90%;
+
+    max-width: 400px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 40px rgba(43, 43, 43, 0.30);
+}
+
+
+/* ========================= */
+/* TÍTULO */
+/* ========================= */
+
+.caixa-confirmacao h2 {
+    margin-top: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    color: #6D2D3A;
+}
+
+
+/* ========================= */
+/* TEXTO */
+/* ========================= */
+
+.caixa-confirmacao p {
+    font-size: 16px;
+
+    margin: 20px 0 30px;
+
+    color: #4A3A3D;
+
+    line-height: 1.5;
+}
+
+
+/* ========================= */
+/* ÁREA DOS BOTÕES */
+/* ========================= */
+
+.botoes-confirmacao {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+/* ========================= */
+/* BOTÕES DE CONFIRMAÇÃO */
+/* ========================= */
+
+.botoes-confirmacao button {
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+/* NÃO */
+
+.botao-nao {
+    background: #D8C8A9;
+
+    color: #4A3A3D;
+
+    border: 1px solid #C8A25A !important;
+}
+
+
+.botao-nao:hover {
+    background: #C8B896;
+
+    transform: translateY(-2px);
+}
+
+
+/* SIM */
+
+.botao-sim {
+    background:
+        linear-gradient(
+            135deg,
+            #A64D5A,
+            #6D2D3A
+        );
+
+    color: #F3EDE0;
+}
+
+
+.botao-sim:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #B65B68,
+            #832F42
+        );
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================= */
+/* ACESSIBILIDADE */
+/* ========================= */
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #C8A25A;
+
+    outline-offset: 3px;
+}
+
+
+/* ========================= */
+/* RESPONSIVO — TABLET */
+/* ========================= */
+
+@media (max-width: 750px) {
+
+    .perfil-card {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 35px 25px;
+    }
+
+
+    .cabecalho {
+        padding: 35px 25px 25px;
+    }
+
+
+    .cabecalho h1 {
+        font-size: 34px;
+    }
+
+
+    .avatares {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .barra-navegacao {
+        gap: 25px;
+    }
+}
+
+
+/* ========================= */
+/* RESPONSIVO — CELULAR */
+/* ========================= */
+
+@media (max-width: 450px) {
+
+    .cabecalho {
+        padding: 30px 20px 20px;
+    }
+
+
+    .cabecalho h1 {
+        font-size: 30px;
+    }
+
+
+    .cabecalho p {
+        font-size: 15px;
+    }
+
+
+    .perfil-card {
+        width: 94%;
+
+        padding: 30px 20px;
+
+        border-radius: 20px;
+    }
+
+
+    .foto-perfil {
+        width: 160px;
+        height: 160px;
+    }
+
+
+    .avatar {
+        width: 110px;
+        height: 110px;
+    }
+
+
+    .modal-conteudo {
+        padding: 35px 20px;
+    }
+
+
+    .avatares {
+        gap: 15px;
+    }
+
+
+    .barra-navegacao {
+        gap: 15px;
+
+        height: 70px;
+    }
+
+
+    .nav-item span {
+        font-size: 21px;
+    }
+
+
+    .nav-item small {
+        font-size: 10px;
+    }
+
+
+    .botao-central {
+        width: 50px;
+        height: 50px;
+
+        font-size: 27px;
+    }
+
+
+    .botoes-confirmacao {
+        flex-direction: column;
+    }
+
+
+    .botoes-confirmacao button {
+        width: 100%;
+    }
+}

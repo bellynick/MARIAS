@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Rosalind Franklin</title>
+
+<link rel="stylesheet" href="historias.css">
+
+
+</head>
+
+<body>
+
+
+<main class="pagina">
+
+    <div class="conteudo">
+
+        <header class="cabecalho">
+
+            <div>
+
+                <h1>Rosalind Franklin</h1>
+
+                <p>Uma história para conhecer</p>
+
+            </div>
+
+        </header>
+
+
+        <!-- HISTÓRIA -->
+
+        <section class="historia">
+
+
+            <!-- LADO DA IMAGEM -->
+
+            <div class="lado-imagem">
+
+                <div class="imagem-container">
+
+                    <img
+                        id="imagemHistoria"
+                        src="https://tse4.mm.bing.net/th/id/OIP.7Lr98XARvMWjBdzLUIIWsgHaKp?rs=1&pid=ImgDetMain&o=7&rm=3"
+                        alt="Rosalind Franklin"
+                    >
+
+                </div>
+
+
+                <!-- INDICADORES -->
+
+                <div class="indicadores">
+
+                    <span class="ponto ativo"></span>
+
+                    <span class="ponto"></span>
+
+                    <span class="ponto"></span>
+
+                    <span class="ponto"></span>
+
+                    <span class="ponto"></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- LADO DO TEXTO -->
+
+            <div class="texto-historia">
+
+
+                <p
+                    class="numero"
+                    id="numeroSlide"
+                >
+                    01 / 05
+                </p>
+
+
+                <h2 id="tituloHistoria">
+                    Quem foi Rosalind Franklin?
+                </h2>
+
+
+                <p id="textoHistoria">
+
+                    Rosalind Franklin foi uma brilhante química
+                    e física britânica, cujo trabalho foi fundamental
+                    para a compreensão das estruturas moleculares
+                    do DNA, RNA e vírus.
+
+                </p>
+
+
+                <p id="textoHistoria2">
+
+                    Especialista em cristalografia de raios-X,
+                    Franklin realizou pesquisas que contribuíram
+                    para importantes descobertas científicas.
+
+                </p>
+
+
+                <div class="informacao">
+
+                    <strong id="destaque">
+                        A cientista por trás da Fotografia 51
+                    </strong>
+
+
+                    <p id="textoDestaque">
+
+                        Sua famosa Fotografia 51 forneceu uma
+                        importante evidência para a compreensão
+                        da estrutura do DNA.
+
+                    </p>
+
+                </div>
+
+
+                <!-- BOTÕES -->
+
+                <div class="controles">
+
+
+                    <button
+                        class="botao-anterior"
+                        onclick="voltarSlide()"
+                    >
+                        ← Anterior
+                    </button>
+
+
+                    <button
+                        class="botao-proximo"
+                        onclick="proximoSlide()"
+                    >
+                        Próximo →
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- BARRA DE NAVEGAÇÃO -->
+
+    <nav class="barra-navegacao">
+
+
+        <a
+            href="historias.html"
+            class="nav-item ativo"
+        >
+
+            <span>⌂</span>
+
+            <small>Início</small>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+
+            <span>⌕</span>
+
+            <small>Buscar</small>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="botao-central"
+        >
+
+            +
+
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+
+            <span>♡</span>
+
+            <small>Favoritos</small>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+
+            <span>☰</span>
+
+            <small>Sobre</small>
+
+        </a>
+
+
+    </nav>
+
+</main>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+
+    const slides = [
+
+
+        /* SLIDE 1 */
+
+        {
+
+            imagem:
+                "https://tse4.mm.bing.net/th/id/OIP.7Lr98XARvMWjBdzLUIIWsgHaKp?rs=1&pid=ImgDetMain&o=7&rm=3",
+
+            titulo:
+                "Quem foi Rosalind Franklin?",
+
+            texto1:
+                "Rosalind Franklin foi uma brilhante química e física britânica, cujo trabalho foi fundamental para a compreensão das estruturas moleculares do DNA, RNA e vírus.",
+
+            texto2:
+                "Especialista em cristalografia de raios-X, Franklin realizou pesquisas que contribuíram para importantes descobertas científicas.",
+
+            destaque:
+                "A cientista por trás da Fotografia 51",
+
+            textoDestaque:
+                "Sua famosa Fotografia 51 forneceu uma importante evidência para a compreensão da estrutura do DNA."
+
+        },
+
+
+        /* SLIDE 2 */
+
+        {
+
+          
+            titulo:
+                "A pesquisa sobre o DNA",
+
+            texto1:
+                "Em 1951, Rosalind Franklin começou a trabalhar no King's College London, onde passou a estudar a estrutura do DNA utilizando cristalografia de raios-X.",
+
+            texto2:
+                "Seu trabalho permitiu obter imagens extremamente detalhadas das moléculas e ajudou a revelar características importantes de sua estrutura.",
+
+            destaque:
+                "Cristalografia de raios-X",
+
+            textoDestaque:
+                "A técnica utilizada por Franklin permitia estudar a estrutura das moléculas a partir da forma como os raios-X eram difratados."
+
+        },
+
+
+        /* SLIDE 3 */
+
+        {
+
+            titulo:
+                "A famosa Fotografia 51",
+
+            texto1:
+                "Em maio de 1952, Franklin e seu estudante Raymond Gosling obtiveram uma imagem de difração de raios-X que ficou conhecida como Fotografia 51.",
+
+            texto2:
+                "A imagem apresentava um padrão característico que fornecia evidências importantes sobre a estrutura helicoidal do DNA.",
+
+            destaque:
+                "Fotografia 51",
+
+            textoDestaque:
+                "A fotografia tornou-se uma das imagens científicas mais famosas do século XX."
+
+        },
+
+
+        /* SLIDE 4 */
+
+        {
+
+            titulo:
+                "Reconhecimento e controvérsias",
+
+            texto1:
+                "Dados relacionados ao trabalho de Franklin chegaram a James Watson e Francis Crick, que estavam desenvolvendo um modelo para a estrutura do DNA.",
+
+            texto2:
+                "Em 1953, Watson e Crick publicaram seu modelo da dupla hélice. O trabalho de Franklin foi fundamental para a compreensão dessa estrutura, embora seu reconhecimento em vida tenha sido limitado.",
+
+            destaque:
+                "Uma contribuição fundamental",
+
+            textoDestaque:
+                "Franklin não recebeu o Prêmio Nobel, que foi concedido em 1962, quatro anos após sua morte."
+
+        },
+
+
+        /* SLIDE 5 */
+
+        {
+
+            titulo:
+                "O legado de Rosalind Franklin",
+
+            texto1:
+                "Rosalind Franklin faleceu em 1958, aos 37 anos, vítima de câncer. Durante sua carreira, também realizou pesquisas importantes sobre vírus e carvão.",
+
+            texto2:
+                "Seu trabalho continua sendo reconhecido como uma contribuição fundamental para a ciência e para a compreensão da estrutura do DNA.",
+
+            destaque:
+                "Uma cientista que mudou a história",
+
+            textoDestaque:
+                "Hoje, Rosalind Franklin é lembrada por sua precisão científica, dedicação à pesquisa e contribuição para uma das maiores descobertas da biologia."
+
+        }
+
+    ];
+
+
+    let slideAtual = 0;
+
+
+    const numero =
+        document.getElementById("numeroSlide");
+
+
+    const titulo =
+        document.getElementById("tituloHistoria");
+
+
+    const texto1 =
+        document.getElementById("textoHistoria");
+
+
+    const texto2 =
+        document.getElementById("textoHistoria2");
+
+
+    const destaque =
+        document.getElementById("destaque");
+
+
+    const textoDestaque =
+        document.getElementById("textoDestaque");
+
+
+    const pontos =
+        document.querySelectorAll(".ponto");
+
+
+
+    function mostrarSlide(numeroSlide) {
+
+
+        slideAtual = numeroSlide;
+
+
+        const slide =
+            slides[slideAtual];
+
+
+
+        /* Troca os textos */
+
+        titulo.textContent =
+            slide.titulo;
+
+
+        texto1.textContent =
+            slide.texto1;
+
+
+        texto2.textContent =
+            slide.texto2;
+
+
+        destaque.textContent =
+            slide.destaque;
+
+
+        textoDestaque.textContent =
+            slide.textoDestaque;
+
+
+        /* Número do slide */
+
+        numero.textContent =
+            "0" +
+            (slideAtual + 1) +
+            " / 0" +
+            slides.length;
+
+
+
+        /* Atualiza os indicadores */
+
+        pontos.forEach(
+            (ponto, index) => {
+
+                ponto.classList.remove(
+                    "ativo"
+                );
+
+
+                if (
+                    index === slideAtual
+                ) {
+
+                    ponto.classList.add(
+                        "ativo"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* PRÓXIMO SLIDE */
+
+    function proximoSlide() {
+
+
+        slideAtual++;
+
+
+        if (
+            slideAtual >= slides.length
+        ) {
+
+            slideAtual = 0;
+
+        }
+
+
+        mostrarSlide(
+            slideAtual
+        );
+
+    }
+
+
+
+    /* SLIDE ANTERIOR */
+
+    function voltarSlide() {
+
+
+        slideAtual--;
+
+
+        if (
+            slideAtual < 0
+        ) {
+
+            slideAtual =
+                slides.length - 1;
+
+        }
+
+
+        mostrarSlide(
+            slideAtual
+        );
+
+    }
+
+
+
+    /* TROCA AUTOMÁTICA */
+
+    setInterval(() => {
+
+        proximoSlide();
+
+    }, 7000);
+
+
+</script>
+```
+
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Malala Yousafzai</title>
+
+    <link rel="stylesheet" href="historias.css">
+
+</head>
+
+
+<body>
+
+    <main class="pagina">
+
+        <div class="conteudo">
+
+            <header class="cabecalho">
+
+                <div>
+                    <h1>Malala Yousafzai</h1>
+                    <p>Uma história para conhecer</p>
+                </div>
+
+            </header>
+
+
+            <section class="historia">
+
+                <div class="lado-imagem">
+
+                    <div class="imagem-container">
+
+                        <img
+                            id="imagemHistoria"
+                            src="https://cdn.britannica.com/84/180684-050-37B058AF/Malala-Yousafzai-2014.jpg"
+                            alt="Malala Yousafzai"
+                        >
+
+
+                        <div class="indicadores">
+
+                            <span class="ponto ativo"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="texto-historia">
+
+                    <div
+                        class="numero"
+                        id="numeroSlide"
+                    >
+                        01 / 05
+                    </div>
+
+
+                    <h2 id="tituloHistoria">
+                        Quem é Malala Yousafzai?
+                    </h2>
+
+
+                    <p id="textoHistoria">
+                        Malala Yousafzai é uma ativista paquistanesa
+                        conhecida mundialmente por defender o direito
+                        das meninas à educação.
+                    </p>
+
+
+                    <p id="textoHistoria2">
+                        Desde muito jovem, Malala tornou-se uma voz
+                        importante na luta para que meninas de todo o
+                        mundo tenham acesso à educação.
+                    </p>
+
+
+                    <div class="informacao">
+
+                        <strong id="destaque">
+                            Uma jovem ativista
+                        </strong>
+
+                        <p id="textoDestaque">
+                            Aos 11 anos, Malala começou a escrever para
+                            a BBC sobre a vida sob o regime talibã e as
+                            dificuldades enfrentadas pelas meninas.
+                        </p>
+
+                    </div>
+
+
+                    <div class="controles">
+
+                        <button
+                            class="botao-anterior"
+                            onclick="voltarSlide()"
+                        >
+                            ← Anterior
+                        </button>
+
+
+                        <button
+                            class="botao-proximo"
+                            onclick="proximoSlide()"
+                        >
+                            Próximo →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <nav class="barra-navegacao">
+
+            <a
+                href="historias.html"
+                class="nav-item ativo"
+            >
+                <span>⌂</span>
+                <small>Início</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>⌕</span>
+                <small>Buscar</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="botao-central"
+            >
+                +
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>♡</span>
+                <small>Favoritos</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>☰</span>
+                <small>Sobre</small>
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <script>
+
+        const slides = [
+
+            {
+                imagem:
+                    "https://cdn.britannica.com/84/180684-050-37B058AF/Malala-Yousafzai-2014.jpg",
+
+                titulo:
+                    "Quem é Malala Yousafzai?",
+
+                texto:
+                    "Malala Yousafzai é uma ativista paquistanesa conhecida mundialmente por defender o direito das meninas à educação.",
+
+                texto2:
+                    "Desde muito jovem, Malala tornou-se uma voz importante na luta para que meninas de todo o mundo tenham acesso à educação.",
+
+                destaque:
+                    "Uma jovem ativista",
+
+                textoDestaque:
+                    "Aos 11 anos, Malala começou a escrever para a BBC sobre a vida sob o regime talibã e as dificuldades enfrentadas pelas meninas."
+            },
+
+
+            {
+                imagem:
+                    "https://cdn.britannica.com/84/180684-050-37B058AF/Malala-Yousafzai-2014.jpg",
+
+                titulo:
+                    "A defesa da educação",
+
+                texto:
+                    "Ainda criança, Malala passou a denunciar as dificuldades enfrentadas por meninas que queriam frequentar a escola em sua região.",
+
+                texto2:
+                    "Por meio de seus textos e discursos, ela defendia que todas as meninas deveriam ter o direito de estudar e construir seu próprio futuro.",
+
+                destaque:
+                    "Sua mensagem",
+
+                textoDestaque:
+                    "Malala acreditava que a educação poderia transformar vidas e ajudar a construir sociedades mais justas."
+            },
+
+
+            {
+                imagem:
+                    "https://cdn.britannica.com/84/180684-050-37B058AF/Malala-Yousafzai-2014.jpg",
+
+                titulo:
+                    "O atentado de 2012",
+
+                texto:
+                    "Em 9 de outubro de 2012, Malala foi vítima de um atentado por causa de sua defesa do direito das meninas à educação.",
+
+                texto2:
+                    "Ela sobreviveu ao ataque e, após sua recuperação, continuou sua campanha pela educação e pelos direitos das meninas.",
+
+                destaque:
+                    "9 de outubro de 2012",
+
+                textoDestaque:
+                    "O atentado fez com que sua história ganhasse ainda mais repercussão internacional."
+            },
+
+
+            {
+                imagem:
+                    "https://cdn.britannica.com/84/180684-050-37B058AF/Malala-Yousafzai-2014.jpg",
+
+                titulo:
+                    "O Prêmio Nobel da Paz",
+
+                texto:
+                    "Em 2014, Malala recebeu o Prêmio Nobel da Paz por sua luta pelo direito à educação.",
+
+                texto2:
+                    "Aos 17 anos, tornou-se a pessoa mais jovem a receber o Prêmio Nobel. Sua conquista chamou a atenção mundial para a importância da educação das meninas.",
+
+                destaque:
+                    "10 de dezembro de 2014",
+
+                textoDestaque:
+                    "Malala recebeu o Prêmio Nobel da Paz juntamente com Kailash Satyarthi."
+            },
+
+
+            {
+                imagem:
+                    "https://cdn.britannica.com/84/180684-050-37B058AF/Malala-Yousafzai-2014.jpg",
+
+                titulo:
+                    "O legado de Malala",
+
+                texto:
+                    "Malala continua defendendo a educação de meninas em diferentes partes do mundo e atua por meio do Fundo Malala.",
+
+                texto2:
+                    "Em 2020, formou-se em Filosofia, Política e Economia pela Universidade de Oxford. Sua trajetória tornou-se símbolo mundial da luta pela educação.",
+
+                destaque:
+                    "Frase",
+
+                textoDestaque:
+                    "\"Eu não conto a minha história porque ela é única. Conto-a porque não é. É a história de muitas raparigas.\""
+            }
+
+        ];
+
+
+        let slideAtual = 0;
+        
+
+        const numero =
+            document.getElementById("numeroSlide");
+
+        const titulo =
+            document.getElementById("tituloHistoria");
+
+        const texto =
+            document.getElementById("textoHistoria");
+
+        const texto2 =
+            document.getElementById("textoHistoria2");
+
+        const destaque =
+            document.getElementById("destaque");
+
+        const textoDestaque =
+            document.getElementById("textoDestaque");
+
+        const pontos =
+            document.querySelectorAll(".ponto");
+
+
+        function mostrarSlide(indice) {
+
+            slideAtual =
+                (indice + slides.length) % slides.length;
+
+
+            const slide =
+                slides[slideAtual];
+
+
+            imagem.style.opacity = "0";
+
+
+            setTimeout(() => {
+
+                imagem.src = slide.imagem;
+
+                imagem.alt = slide.titulo;
+
+                imagem.style.opacity = "1";
+
+            }, 250);
+
+
+            numero.textContent =
+                "0" + (slideAtual + 1) +
+                " / 0" + slides.length;
+
+
+            titulo.textContent =
+                slide.titulo;
+
+
+            texto.textContent =
+                slide.texto;
+
+
+            texto2.textContent =
+                slide.texto2;
+
+
+            destaque.textContent =
+                slide.destaque;
+
+
+            textoDestaque.textContent =
+                slide.textoDestaque;
+
+
+            pontos.forEach((ponto, index) => {
+
+                ponto.classList.toggle(
+                    "ativo",
+                    index === slideAtual
+                );
+
+            });
+
+        }
+
+
+        function proximoSlide() {
+
+            mostrarSlide(
+                slideAtual + 1
+            );
+
+        }
+
+
+        function voltarSlide() {
+
+            mostrarSlide(
+                slideAtual - 1
+            );
+
+        }
+
+
+        // Troca automática a cada 7 segundos
+
+        setInterval(() => {
+
+            proximoSlide();
+
+        }, 7000);
+
+
+    </script>
+
+</body>
+
+</html>

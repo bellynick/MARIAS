@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Ada Lovelace</title>
+
+    <link rel="stylesheet" href="historias.css">
+
+</head>
+
+
+<body>
+
+    <main class="pagina">
+
+        <div class="conteudo">
+
+            <header class="cabecalho">
+
+                <div>
+                    <h1>Ada Lovelace</h1>
+                    <p>Uma história para conhecer</p>
+                </div>
+
+            </header>
+
+
+            <section class="historia">
+
+                <div class="lado-imagem">
+
+                    <div class="imagem-container">
+
+                        <img
+                            id="imagemHistoria"
+                            src="https://cdn.britannica.com/22/23622-004-B2E2A2A2/Ada-King-countess-Lovelace-Alfred-Edward-Chalon-circa-1838.jpg"
+                            alt="Ada Lovelace"
+                        >
+
+
+                        <div class="indicadores">
+
+                            <span class="ponto ativo"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="texto-historia">
+
+                    <div
+                        class="numero"
+                        id="numeroSlide"
+                    >
+                        01 / 05
+                    </div>
+
+
+                    <h2 id="tituloHistoria">
+                        Quem foi Ada Lovelace?
+                    </h2>
+
+
+                    <p id="textoHistoria">
+                        Augusta Ada Byron, conhecida como Ada Lovelace,
+                        foi uma matemática e escritora inglesa,
+                        considerada uma das pioneiras da programação
+                        de computadores.
+                    </p>
+
+
+                    <p id="textoHistoria2">
+                        Filha do poeta Lord Byron e da matemática
+                        Annabella Milbanke, Ada foi incentivada desde
+                        cedo a estudar lógica e matemática.
+                    </p>
+
+
+                    <div class="informacao">
+
+                        <strong id="destaque">
+                            Nascimento
+                        </strong>
+
+                        <p id="textoDestaque">
+                            Ada Lovelace nasceu em 1815 e viveu em uma
+                            época em que o acesso das mulheres à ciência
+                            e à matemática era bastante limitado.
+                        </p>
+
+                    </div>
+
+
+                    <div class="controles">
+
+                        <button
+                            class="botao-anterior"
+                            onclick="voltarSlide()"
+                        >
+                            ← Anterior
+                        </button>
+
+                        <button
+                            class="botao-proximo"
+                            onclick="proximoSlide()"
+                        >
+                            Próximo →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <nav class="barra-navegacao">
+
+            <a
+                href="historias.html"
+                class="nav-item ativo"
+            >
+                <span>⌂</span>
+                <small>Início</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>⌕</span>
+                <small>Buscar</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="botao-central"
+            >
+                +
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>♡</span>
+                <small>Favoritos</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>☰</span>
+                <small>Sobre</small>
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <script>
+
+        const slides = [
+
+            {
+                imagem: "https://cdn.britannica.com/22/23622-004-B2E2A2A2/Ada-King-countess-Lovelace-Alfred-Edward-Chalon-circa-1838.jpg",
+
+                titulo: "Quem foi Ada Lovelace?",
+
+                texto:
+                    "Augusta Ada Byron, conhecida como Ada Lovelace, foi uma matemática e escritora inglesa, considerada uma das pioneiras da programação de computadores.",
+
+                texto2:
+                    "Filha do poeta Lord Byron e da matemática Annabella Milbanke, Ada foi incentivada desde cedo a estudar lógica e matemática.",
+
+                destaque:
+                    "Nascimento",
+
+                textoDestaque:
+                    "Ada Lovelace nasceu em 1815 e viveu em uma época em que o acesso das mulheres à ciência e à matemática era bastante limitado."
+            },
+
+
+            {
+                imagem: "https://cdn.britannica.com/22/23622-004-B2E2A2A2/Ada-King-countess-Lovelace-Alfred-Edward-Chalon-circa-1838.jpg",
+
+                titulo: "A Máquina Analítica",
+
+                texto:
+                    "Sua vida mudou quando conheceu Charles Babbage, matemático e inventor que trabalhava no projeto da Máquina Analítica.",
+
+                texto2:
+                    "A máquina era um projeto de computador mecânico que poderia realizar cálculos automaticamente. Ada percebeu que seu potencial poderia ir muito além dos números.",
+
+                destaque:
+                    "Charles Babbage",
+
+                textoDestaque:
+                    "O encontro com Babbage foi fundamental para que Ada desenvolvesse suas ideias sobre máquinas, matemática e computação."
+            },
+
+
+            {
+                imagem: "https://cdn.britannica.com/22/23622-004-B2E2A2A2/Ada-King-countess-Lovelace-Alfred-Edward-Chalon-circa-1838.jpg",
+
+                titulo: "A primeira programação",
+
+                texto:
+                    "Entre 1842 e 1843, Ada traduziu um artigo sobre a Máquina Analítica escrito pelo engenheiro italiano Luigi Menabrea.",
+
+                texto2:
+                    "Além da tradução, ela acrescentou extensas notas próprias. Uma delas apresentava uma sequência de instruções destinada a ser processada pela máquina.",
+
+                destaque:
+                    "Realização",
+
+                textoDestaque:
+                    "Suas notas são frequentemente consideradas um dos primeiros exemplos publicados de um algoritmo destinado a ser executado por uma máquina."
+            },
+
+
+            {
+                imagem: "https://cdn.britannica.com/22/23622-004-B2E2A2A2/Ada-King-countess-Lovelace-Alfred-Edward-Chalon-circa-1838.jpg",
+
+                titulo: "Uma visão à frente de seu tempo",
+
+                texto:
+                    "Ada percebeu algo que ia muito além dos cálculos matemáticos: uma máquina poderia trabalhar com símbolos e representar diferentes tipos de informação.",
+
+                texto2:
+                    "Ela imaginou possibilidades que se aproximam do conceito moderno de programação e acreditava que máquinas poderiam manipular música, imagens e outros tipos de informação.",
+
+                destaque:
+                    "Frase",
+
+                textoDestaque:
+                    "\"A máquina analítica tece padrões algébricos, assim como o tear de Jacquard tece flores e folhas.\""
+            },
+
+
+            {
+                imagem: "https://cdn.britannica.com/22/23622-004-B2E2A2A2/Ada-King-countess-Lovelace-Alfred-Edward-Chalon-circa-1838.jpg",
+
+                titulo: "O legado de Ada Lovelace",
+
+                texto:
+                    "Ada morreu em 1852, aos 36 anos. Durante sua vida, suas ideias não receberam o reconhecimento que teriam posteriormente.",
+
+                texto2:
+                    "Décadas depois, suas notas foram republicadas e seu trabalho passou a ser cada vez mais valorizado. Seu legado também inspirou a criação da linguagem de programação Ada, batizada em sua homenagem.",
+
+                destaque:
+                    "Ada Lovelace Day",
+
+                textoDestaque:
+                    "A segunda terça-feira de outubro é celebrada como Ada Lovelace Day, destacando as conquistas das mulheres nas áreas de ciência, tecnologia, engenharia e matemática."
+            }
+
+        ];
+
+
+        let slideAtual = 0;
+
+        const numero = document.getElementById("numeroSlide");
+
+        const titulo = document.getElementById("tituloHistoria");
+
+        const texto = document.getElementById("textoHistoria");
+
+        const texto2 = document.getElementById("textoHistoria2");
+
+        const destaque = document.getElementById("destaque");
+
+        const textoDestaque = document.getElementById("textoDestaque");
+
+        const pontos = document.querySelectorAll(".ponto");
+
+
+        function mostrarSlide(indice) {
+
+            slideAtual = (indice + slides.length) % slides.length;
+
+            const slide = slides[slideAtual];
+
+
+            imagem.style.opacity = "0";
+
+
+            setTimeout(() => {
+
+                imagem.src = slide.imagem;
+
+                imagem.alt = slide.titulo;
+
+                imagem.style.opacity = "1";
+
+            }, 250);
+
+
+            numero.textContent =
+                "0" + (slideAtual + 1) +
+                " / 0" + slides.length;
+
+
+            titulo.textContent = slide.titulo;
+
+            texto.textContent = slide.texto;
+
+            texto2.textContent = slide.texto2;
+
+            destaque.textContent = slide.destaque;
+
+            textoDestaque.textContent =
+                slide.textoDestaque;
+
+
+            pontos.forEach((ponto, index) => {
+
+                ponto.classList.toggle(
+                    "ativo",
+                    index === slideAtual
+                );
+
+            });
+
+        }
+
+
+        function proximoSlide() {
+
+            mostrarSlide(slideAtual + 1);
+
+        }
+
+
+        function voltarSlide() {
+
+            mostrarSlide(slideAtual - 1);
+
+        }
+
+
+        // Troca automática a cada 7 segundos
+
+        setInterval(() => {
+
+            proximoSlide();
+
+        }, 7000);
+
+
+    </script>
+
+</body>
+
+</html>

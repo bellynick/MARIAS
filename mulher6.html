@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Katherine Johnson</title>
+
+    <link rel="stylesheet" href="historias.css">
+
+</head>
+
+
+<body>
+
+    <main class="pagina">
+
+        <div class="conteudo">
+
+            <header class="cabecalho">
+
+                <div>
+                    <h1>Katherine Johnson</h1>
+                    <p>Uma história para conhecer</p>
+                </div>
+
+            </header>
+
+
+            <section class="historia">
+
+                <div class="lado-imagem">
+
+                    <div class="imagem-container">
+
+                        <img
+                            id="imagemHistoria"
+                            src="https://images-assets.nasa.gov/image/LRC-1971-B701_P-03033/LRC-1971-B701_P-03033~large.jpg"
+                            alt="Katherine Johnson"
+                        >
+
+
+
+
+                        <div class="indicadores">
+
+                            <span class="ponto ativo"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="texto-historia">
+
+                    <div
+                        class="numero"
+                        id="numeroSlide"
+                    >
+                        01 / 05
+                    </div>
+
+
+                    <h2 id="tituloHistoria">
+                        Quem foi Katherine Johnson?
+                    </h2>
+
+
+                    <p id="textoHistoria">
+                        Katherine Johnson foi uma matemática e física
+                        norte-americana cujo trabalho foi fundamental
+                        para o sucesso das missões espaciais dos
+                        Estados Unidos.
+                    </p>
+
+
+                    <p id="textoHistoria2">
+                        Sua precisão matemática e sua capacidade de
+                        resolver problemas complexos fizeram dela uma
+                        das profissionais mais importantes da história
+                        da exploração espacial.
+                    </p>
+
+
+                    <div class="informacao">
+
+                        <strong id="destaque">
+                            Nascimento
+                        </strong>
+
+                        <p id="textoDestaque">
+                            Katherine Johnson nasceu em 1918,
+                            nos Estados Unidos, e desde criança
+                            demonstrou grande talento para a matemática.
+                        </p>
+
+                    </div>
+
+
+                    <div class="controles">
+
+                        <button
+                            class="botao-anterior"
+                            onclick="voltarSlide()"
+                        >
+                            ← Anterior
+                        </button>
+
+
+                        <button
+                            class="botao-proximo"
+                            onclick="proximoSlide()"
+                        >
+                            Próximo →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <nav class="barra-navegacao">
+
+            <a
+                href="historias.html"
+                class="nav-item ativo"
+            >
+                <span>⌂</span>
+                <small>Início</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>⌕</span>
+                <small>Buscar</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="botao-central"
+            >
+                +
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>♡</span>
+                <small>Favoritos</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>☰</span>
+                <small>Sobre</small>
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <script>
+
+        const slides = [
+
+            {
+                imagem:
+                    "https://images-assets.nasa.gov/image/LRC-1971-B701_P-03033/LRC-1971-B701_P-03033~large.jpg",
+
+                titulo:
+                    "Quem foi Katherine Johnson?",
+
+                texto:
+                    "Katherine Johnson foi uma matemática e física norte-americana cujo trabalho foi fundamental para o sucesso das missões espaciais dos Estados Unidos.",
+
+                texto2:
+                    "Sua precisão matemática e sua capacidade de resolver problemas complexos fizeram dela uma das profissionais mais importantes da história da exploração espacial.",
+
+                destaque:
+                    "Nascimento",
+
+                textoDestaque:
+                    "Katherine Johnson nasceu em 1918, nos Estados Unidos, e desde criança demonstrou grande talento para a matemática."
+            },
+
+
+            {
+                imagem:
+                    "https://images-assets.nasa.gov/image/LRC-1971-B701_P-03033/LRC-1971-B701_P-03033~large.jpg",
+
+                titulo:
+                    "A entrada na NACA",
+
+                texto:
+                    "Em 1953, Katherine começou a trabalhar na NACA, organização que posteriormente se tornou a NASA.",
+
+                texto2:
+                    "Ela trabalhou como uma das chamadas 'computadoras humanas', mulheres responsáveis por realizar cálculos matemáticos fundamentais para os projetos aeronáuticos e espaciais.",
+
+                destaque:
+                    "Um grande desafio",
+
+                textoDestaque:
+                    "Katherine enfrentou racismo e discriminação de gênero durante sua carreira, mas continuou trabalhando e conquistando espaço na área científica."
+            },
+
+
+            {
+                imagem:
+                    "https://images-assets.nasa.gov/image/LRC-1971-B701_P-03033/LRC-1971-B701_P-03033~large.jpg",
+
+                titulo:
+                    "Os cálculos de John Glenn",
+
+                texto:
+                    "Em 1962, os Estados Unidos se preparavam para enviar John Glenn para realizar um voo orbital ao redor da Terra.",
+
+                texto2:
+                    "Mesmo com os novos computadores digitais sendo utilizados pela NASA, Glenn pediu que Katherine verificasse pessoalmente os cálculos antes de seu voo.",
+
+                destaque:
+                    "Precisão",
+
+                textoDestaque:
+                    "A confiança em seus cálculos demonstrava o enorme respeito que Katherine havia conquistado por sua precisão matemática."
+            },
+
+
+            {
+                imagem:
+                    "https://images-assets.nasa.gov/image/LRC-1971-B701_P-03033/LRC-1971-B701_P-03033~large.jpg",
+
+                titulo:
+                    "A chegada à Lua",
+
+                texto:
+                    "Katherine também participou dos cálculos relacionados às trajetórias de importantes missões espaciais.",
+
+                texto2:
+                    "Entre elas estava a missão Apollo 11, que em 1969 levou os astronautas Neil Armstrong, Buzz Aldrin e Michael Collins em uma jornada histórica até a Lua.",
+
+                destaque:
+                    "Apollo 11",
+
+                textoDestaque:
+                    "Seu trabalho matemático ajudou a NASA a calcular trajetórias e caminhos necessários para as missões espaciais."
+            },
+
+
+            {
+                imagem:
+                    "https://images-assets.nasa.gov/image/LRC-1971-B701_P-03033/LRC-1971-B701_P-03033~large.jpg",
+
+                titulo:
+                    "O legado de Katherine Johnson",
+
+                texto:
+                    "Katherine Johnson deixou um importante legado para a ciência, para a exploração espacial e para as mulheres que desejavam seguir carreiras nas áreas de matemática e tecnologia.",
+
+                texto2:
+                    "Em 2015, recebeu a Medalha Presidencial da Liberdade, uma das maiores honrarias civis dos Estados Unidos.",
+
+                destaque:
+                    "Frase",
+
+                textoDestaque:
+                    "\"Eu contava tudo. Contava os passos para a estrada, os passos para a igreja, o número de pratos que eu lavava... tudo o que podia ser contado, eu contava.\""
+            }
+
+        ];
+
+
+        let slideAtual = 0;
+
+
+        const numero =
+            document.getElementById("numeroSlide");
+
+        const titulo =
+            document.getElementById("tituloHistoria");
+
+        const texto =
+            document.getElementById("textoHistoria");
+
+        const texto2 =
+            document.getElementById("textoHistoria2");
+
+        const destaque =
+            document.getElementById("destaque");
+
+        const textoDestaque =
+            document.getElementById("textoDestaque");
+
+        const pontos =
+            document.querySelectorAll(".ponto");
+
+
+        function mostrarSlide(indice) {
+
+            slideAtual =
+                (indice + slides.length) % slides.length;
+
+
+            const slide =
+                slides[slideAtual];
+
+
+            imagem.style.opacity = "0";
+
+
+            setTimeout(() => {
+
+                imagem.src = slide.imagem;
+
+                imagem.alt = slide.titulo;
+
+                imagem.style.opacity = "1";
+
+            }, 250);
+
+
+            numero.textContent =
+                "0" + (slideAtual + 1) +
+                " / 0" + slides.length;
+
+
+            titulo.textContent =
+                slide.titulo;
+
+
+            texto.textContent =
+                slide.texto;
+
+
+            texto2.textContent =
+                slide.texto2;
+
+
+            destaque.textContent =
+                slide.destaque;
+
+
+            textoDestaque.textContent =
+                slide.textoDestaque;
+
+
+            pontos.forEach((ponto, index) => {
+
+                ponto.classList.toggle(
+                    "ativo",
+                    index === slideAtual
+                );
+
+            });
+
+        }
+
+
+        function proximoSlide() {
+
+            mostrarSlide(
+                slideAtual + 1
+            );
+
+        }
+
+
+        function voltarSlide() {
+
+            mostrarSlide(
+                slideAtual - 1
+            );
+
+        }
+
+
+        // Troca automática a cada 7 segundos
+
+        setInterval(() => {
+
+            proximoSlide();
+
+        }, 7000);
+
+
+    </script>
+
+</body>
+
+</html>

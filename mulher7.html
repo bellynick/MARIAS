@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Marielle Franco</title>
+
+    <link rel="stylesheet" href="historias.css">
+
+</head>
+
+
+<body>
+
+    <main class="pagina">
+
+        <div class="conteudo">
+
+            <header class="cabecalho">
+
+                <div>
+                    <h1>Marielle Franco</h1>
+                    <p>Uma história para conhecer</p>
+                </div>
+
+            </header>
+
+
+            <section class="historia">
+
+                <div class="lado-imagem">
+
+                    <div class="imagem-container">
+
+                        <img
+                            id="imagemHistoria"
+                            src="https://www.liberationnews.org/wp-content/uploads/2018/03/Marielle_Franco-800x1200.jpg"
+                            alt="Marielle Franco"
+                        >
+
+
+                        <div class="indicadores">
+
+                            <span class="ponto ativo"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="texto-historia">
+
+                    <div
+                        class="numero"
+                        id="numeroSlide"
+                    >
+                        01 / 05
+                    </div>
+
+
+                    <h2 id="tituloHistoria">
+                        Quem foi Marielle Franco?
+                    </h2>
+
+
+                    <p id="textoHistoria">
+                        Marielle Francisco da Silva, conhecida como
+                        Marielle Franco, foi uma socióloga, política
+                        e defensora dos direitos humanos brasileira.
+                    </p>
+
+
+                    <p id="textoHistoria2">
+                        Nascida e criada no Complexo da Maré, no Rio
+                        de Janeiro, tornou-se uma importante voz na
+                        defesa das populações das favelas e de grupos
+                        historicamente marginalizados.
+                    </p>
+
+
+                    <div class="informacao">
+
+                        <strong id="destaque">
+                            Formação
+                        </strong>
+
+                        <p id="textoDestaque">
+                            Marielle era formada em Ciências Sociais
+                            pela PUC-Rio e tinha mestrado em
+                            Administração Pública pela UFF.
+                        </p>
+
+                    </div>
+
+
+                    <div class="controles">
+
+                        <button
+                            class="botao-anterior"
+                            onclick="voltarSlide()"
+                        >
+                            ← Anterior
+                        </button>
+
+
+                        <button
+                            class="botao-proximo"
+                            onclick="proximoSlide()"
+                        >
+                            Próximo →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <nav class="barra-navegacao">
+
+            <a
+                href="historias.html"
+                class="nav-item ativo"
+            >
+                <span>⌂</span>
+                <small>Início</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>⌕</span>
+                <small>Buscar</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="botao-central"
+            >
+                +
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>♡</span>
+                <small>Favoritos</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>☰</span>
+                <small>Sobre</small>
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <script>
+
+        const slides = [
+
+            {
+                imagem:
+                    "https://www.liberationnews.org/wp-content/uploads/2018/03/Marielle_Franco-800x1200.jpg",
+
+                titulo:
+                    "Quem foi Marielle Franco?",
+
+                texto:
+                    "Marielle Francisco da Silva, conhecida como Marielle Franco, foi uma socióloga, política e defensora dos direitos humanos brasileira.",
+
+                texto2:
+                    "Nascida e criada no Complexo da Maré, no Rio de Janeiro, tornou-se uma importante voz na defesa das populações das favelas e de grupos historicamente marginalizados.",
+
+                destaque:
+                    "Formação",
+
+                textoDestaque:
+                    "Marielle era formada em Ciências Sociais pela PUC-Rio e tinha mestrado em Administração Pública pela UFF."
+            },
+
+
+            {
+                imagem:
+                    "https://www.liberationnews.org/wp-content/uploads/2018/03/Marielle_Franco-800x1200.jpg",
+
+                titulo:
+                    "A entrada na política",
+
+                texto:
+                    "Depois de construir sua trajetória na defesa dos direitos humanos, Marielle entrou para a política institucional.",
+
+                texto2:
+                    "Em 2016, foi eleita vereadora da cidade do Rio de Janeiro com mais de 46 mil votos, tornando-se uma das mulheres negras de maior destaque na política carioca.",
+
+                destaque:
+                    "2016",
+
+                textoDestaque:
+                    "Marielle foi eleita vereadora do Rio de Janeiro com uma das votações mais expressivas daquela legislatura."
+            },
+
+
+            {
+                imagem:
+                    "https://www.liberationnews.org/wp-content/uploads/2018/03/Marielle_Franco-800x1200.jpg",
+
+                titulo:
+                    "Sua atuação como vereadora",
+
+                texto:
+                    "Durante seu mandato, Marielle atuou na defesa de políticas públicas relacionadas à segurança, saúde, assistência social e aos direitos das mulheres.",
+
+                texto2:
+                    "Ela também buscava ampliar a representação de pessoas negras, mulheres, moradores de favelas e outros grupos que historicamente tiveram pouco espaço na política.",
+
+                destaque:
+                    "Representatividade",
+
+                textoDestaque:
+                    "Sua atuação ajudou a dar visibilidade a grupos que durante muito tempo tiveram pouca representação nos espaços de poder."
+            },
+
+
+            {
+                imagem:
+                    "https://www.liberationnews.org/wp-content/uploads/2018/03/Marielle_Franco-800x1200.jpg",
+
+                titulo:
+                    "Violência política",
+
+                texto:
+                    "Marielle enfrentou um cenário de violência política e social durante sua atuação como defensora dos direitos humanos.",
+
+                texto2:
+                    "Em 14 de março de 2018, Marielle Franco foi assassinada no Rio de Janeiro junto com o motorista Anderson Gomes. O crime provocou grande repercussão no Brasil e no mundo.",
+
+                destaque:
+                    "14 de março de 2018",
+
+                textoDestaque:
+                    "Sua morte gerou manifestações e debates nacionais e internacionais sobre violência política, democracia e direitos humanos."
+            },
+
+
+            {
+                imagem:
+                    "https://www.liberationnews.org/wp-content/uploads/2018/03/Marielle_Franco-800x1200.jpg",
+
+                titulo:
+                    "O legado de Marielle",
+
+                texto:
+                    "Após sua morte, Marielle tornou-se um símbolo internacional de resistência, representatividade, democracia e defesa dos direitos humanos.",
+
+                texto2:
+                    "O movimento conhecido como \"Sementes de Marielle\" passou a representar novas lideranças inspiradas em sua trajetória e em sua atuação política.",
+
+                destaque:
+                    "Frase",
+
+                textoDestaque:
+                    "\"As rosas da resistência nascem no asfalto. A gente recebe rosas, mas vamos estar com os punhos cerrados falando de nossa existência contra os que tentam nos apagar.\""
+            }
+
+        ];
+
+
+        let slideAtual = 0;
+
+
+        const numero =
+            document.getElementById("numeroSlide");
+
+        const titulo =
+            document.getElementById("tituloHistoria");
+
+        const texto =
+            document.getElementById("textoHistoria");
+
+        const texto2 =
+            document.getElementById("textoHistoria2");
+
+        const destaque =
+            document.getElementById("destaque");
+
+        const textoDestaque =
+            document.getElementById("textoDestaque");
+
+        const pontos =
+            document.querySelectorAll(".ponto");
+
+
+        function mostrarSlide(indice) {
+
+            slideAtual =
+                (indice + slides.length) % slides.length;
+
+
+            const slide =
+                slides[slideAtual];
+
+
+            imagem.style.opacity = "0";
+
+
+            setTimeout(() => {
+
+                imagem.src = slide.imagem;
+
+                imagem.alt = slide.titulo;
+
+                imagem.style.opacity = "1";
+
+            }, 250);
+
+
+            numero.textContent =
+                "0" + (slideAtual + 1) +
+                " / 0" + slides.length;
+
+
+            titulo.textContent =
+                slide.titulo;
+
+
+            texto.textContent =
+                slide.texto;
+
+
+            texto2.textContent =
+                slide.texto2;
+
+
+            destaque.textContent =
+                slide.destaque;
+
+
+            textoDestaque.textContent =
+                slide.textoDestaque;
+
+
+            pontos.forEach((ponto, index) => {
+
+                ponto.classList.toggle(
+                    "ativo",
+                    index === slideAtual
+                );
+
+            });
+
+        }
+
+
+        function proximoSlide() {
+
+            mostrarSlide(
+                slideAtual + 1
+            );
+
+        }
+
+
+        function voltarSlide() {
+
+            mostrarSlide(
+                slideAtual - 1
+            );
+
+        }
+
+
+        // Troca automática a cada 7 segundos
+
+        setInterval(() => {
+
+            proximoSlide();
+
+        }, 7000);
+
+
+    </script>
+
+</body>
+
+</html>

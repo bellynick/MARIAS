@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Joana d'Arc</title>
+
+    <link rel="stylesheet" href="historias.css">
+
+</head>
+
+
+<body>
+
+    <main class="pagina">
+
+        <div class="conteudo">
+
+            <header class="cabecalho">
+
+                <div>
+
+                    <h1>Joana d'Arc</h1>
+
+                    <p>Uma história para conhecer</p>
+
+                </div>
+
+            </header>
+
+
+            <!-- HISTÓRIA -->
+
+            <section class="historia">
+
+
+                <!-- LADO DA IMAGEM -->
+
+                <div class="lado-imagem">
+
+                    <div class="imagem-container">
+
+                        <img
+                            id="imagemHistoria"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRkNfLEcMgpz_nAibNVKf2bOG-cWYGVwn41g&s"
+                            alt="Joana d'Arc"
+                        >
+                        
+                    </div>
+
+
+                    <!-- INDICADORES -->
+
+                    <div class="indicadores">
+
+                        <span class="ponto ativo"></span>
+
+                        <span class="ponto"></span>
+
+                        <span class="ponto"></span>
+
+                        <span class="ponto"></span>
+
+                        <span class="ponto"></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LADO DO TEXTO -->
+
+                <div class="texto-historia">
+
+
+                    <p
+                        class="numero"
+                        id="numeroSlide"
+                    >
+                        01 / 05
+                    </p>
+
+
+                    <h2 id="tituloHistoria">
+                        Quem foi Joana d'Arc?
+                    </h2>
+
+
+                    <p id="textoHistoria">
+
+                        Joana d'Arc foi uma camponesa francesa
+                        nascida por volta de 1412, em Domrémy.
+                        Desde jovem, afirmava ouvir vozes divinas
+                        que a orientavam a ajudar a França durante
+                        a Guerra dos Cem Anos.
+
+                    </p>
+
+
+                    <p id="textoHistoria2">
+
+                        Mesmo sendo muito jovem, Joana acreditava
+                        que tinha uma missão e decidiu ajudar o
+                        exército francês.
+
+                    </p>
+
+
+                    <div class="informacao">
+
+                        <strong id="destaque">
+                            Uma jovem que entrou para a história
+                        </strong>
+
+
+                        <p id="textoDestaque">
+
+                            Com apenas 17 anos, Joana conseguiu
+                            apoio para participar da luta pela França.
+
+                        </p>
+
+                    </div>
+
+
+                    <!-- BOTÕES -->
+
+                    <div class="controles">
+
+
+                        <button
+                            class="botao-anterior"
+                            onclick="voltarSlide()"
+                        >
+                            ← Anterior
+                        </button>
+
+
+                        <button
+                            class="botao-proximo"
+                            onclick="proximoSlide()"
+                        >
+                            Próximo →
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- BARRA DE NAVEGAÇÃO -->
+
+        <nav class="barra-navegacao">
+
+
+            <a
+                href="historias.html"
+                class="nav-item ativo"
+            >
+
+                <span>⌂</span>
+
+                <small>Início</small>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span>⌕</span>
+
+                <small>Buscar</small>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="botao-central"
+            >
+
+                +
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span>♡</span>
+
+                <small>Favoritos</small>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span>☰</span>
+
+                <small>Sobre</small>
+
+            </a>
+
+
+        </nav>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+
+        const slides = [
+
+
+            /* SLIDE 1 */
+
+            {
+
+                imagem:
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRkNfLEcMgpz_nAibNVKf2bOG-cWYGVwn41g&s",
+
+                titulo:
+                    "Quem foi Joana d'Arc?",
+
+                texto1:
+                    "Joana d'Arc foi uma camponesa francesa nascida por volta de 1412, em Domrémy. Desde jovem, afirmava ouvir vozes divinas que a orientavam a ajudar a França durante a Guerra dos Cem Anos.",
+
+                texto2:
+                    "Mesmo sendo muito jovem, Joana acreditava que tinha uma missão e decidiu ajudar o exército francês.",
+
+                destaque:
+                    "Uma jovem que entrou para a história",
+
+                textoDestaque:
+                    "Com apenas 17 anos, Joana conseguiu apoio para participar da luta pela França."
+
+            },
+
+
+            /* SLIDE 2 */
+
+            {
+
+                imagem:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Joan_of_Arc_miniature_graded.jpg/640px-Joan_of_Arc_miniature_graded.jpg",
+
+                titulo:
+                    "A jovem guerreira",
+
+                texto1:
+                    "Com apenas 17 anos, Joana d'Arc conseguiu convencer importantes líderes franceses de que deveria ajudar na luta contra os ingleses.",
+
+                texto2:
+                    "Ela passou a acompanhar as tropas francesas e usava uma armadura, algo extremamente incomum para uma mulher daquela época.",
+
+                destaque:
+                    "A Guerra dos Cem Anos",
+
+                textoDestaque:
+                    "Joana tornou-se uma importante figura francesa durante o conflito entre França e Inglaterra."
+
+            },
+
+
+            /* SLIDE 3 */
+
+            {
+
+                imagem:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Joan_of_Arc_miniature_2.jpg/640px-Joan_of_Arc_miniature_2.jpg",
+
+                titulo:
+                    "A vitória em Orléans",
+
+                texto1:
+                    "Em 1429, Joana teve um papel importante na vitória francesa durante o cerco de Orléans.",
+
+                texto2:
+                    "A vitória aumentou sua fama e fortaleceu a resistência francesa durante a Guerra dos Cem Anos.",
+
+                destaque:
+                    "1429 – Orléans",
+
+                textoDestaque:
+                    "A participação de Joana na libertação de Orléans tornou-se um dos momentos mais conhecidos de sua história."
+
+            },
+
+
+            /* SLIDE 4 */
+
+            {
+
+                imagem:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Joan_of_Arc_by_Cl%C3%A9ment_de_Fauquemont.jpg/640px-Joan_of_Arc_by_Cl%C3%A9ment_de_Fauquemont.jpg",
+
+                titulo:
+                    "Captura e julgamento",
+
+                texto1:
+                    "Em 1430, Joana d'Arc foi capturada por inimigos durante a guerra.",
+
+                texto2:
+                    "Ela foi julgada por heresia em um processo religioso e acabou sendo condenada à morte.",
+
+                destaque:
+                    "Um julgamento controverso",
+
+                textoDestaque:
+                    "Joana foi executada em 1431, aos 19 anos, tornando-se posteriormente um símbolo de coragem e resistência."
+
+            },
+
+
+            /* SLIDE 5 */
+
+            {
+
+                imagem:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Joan_of_Arc_-_Albert_Lynch.jpg/640px-Joan_of_Arc_-_Albert_Lynch.jpg",
+
+                titulo:
+                    "O legado de Joana d'Arc",
+
+                texto1:
+                    "Anos depois de sua morte, o julgamento de Joana foi revisto e ela foi considerada inocente das acusações.",
+
+                texto2:
+                    "Em 1920, Joana d'Arc foi canonizada pela Igreja Católica e tornou-se oficialmente santa.",
+
+                destaque:
+                    "Símbolo de coragem",
+
+                textoDestaque:
+                    "Sua história permanece como um dos maiores símbolos de coragem, fé e resistência da história da França."
+
+            }
+
+        ];
+
+
+        let slideAtual = 0;
+
+
+        const imagem =
+            document.getElementById("imagemHistoria");
+
+
+        const numero =
+            document.getElementById("numeroSlide");
+
+
+        const titulo =
+            document.getElementById("tituloHistoria");
+
+
+        const texto1 =
+            document.getElementById("textoHistoria");
+
+
+        const texto2 =
+            document.getElementById("textoHistoria2");
+
+
+        const destaque =
+            document.getElementById("destaque");
+
+
+        const textoDestaque =
+            document.getElementById("textoDestaque");
+
+
+        const pontos =
+            document.querySelectorAll(".ponto");
+
+
+
+        function mostrarSlide(numeroSlide) {
+
+
+            slideAtual = numeroSlide;
+
+
+            const slide =
+                slides[slideAtual];
+
+                
+            titulo.textContent =
+                slide.titulo;
+
+
+            texto1.textContent =
+                slide.texto1;
+
+
+            texto2.textContent =
+                slide.texto2;
+
+
+            destaque.textContent =
+                slide.destaque;
+
+
+            textoDestaque.textContent =
+                slide.textoDestaque;
+
+
+            numero.textContent =
+                "0" +
+                (slideAtual + 1) +
+                " / 0" +
+                slides.length;
+
+
+
+            /* Atualiza os pontos */
+
+            pontos.forEach(
+                (ponto, index) => {
+
+                    ponto.classList.remove(
+                        "ativo"
+                    );
+
+
+                    if (
+                        index === slideAtual
+                    ) {
+
+                        ponto.classList.add(
+                            "ativo"
+                        );
+
+                    }
+
+                }
+            );
+
+        }
+
+
+
+        /* PRÓXIMO */
+
+        function proximoSlide() {
+
+
+            slideAtual++;
+
+
+            if (
+                slideAtual >= slides.length
+            ) {
+
+                slideAtual = 0;
+
+            }
+
+
+            mostrarSlide(
+                slideAtual
+            );
+
+        }
+
+
+
+        /* ANTERIOR */
+
+        function voltarSlide() {
+
+
+            slideAtual--;
+
+
+            if (
+                slideAtual < 0
+            ) {
+
+                slideAtual =
+                    slides.length - 1;
+
+            }
+
+
+            mostrarSlide(
+                slideAtual
+            );
+
+        }
+
+
+
+        /*
+        TROCA AUTOMÁTICA
+
+        A cada 7 segundos,
+        passa para o próximo slide.
+        */
+
+        setInterval(() => {
+
+            proximoSlide();
+
+        }, 7000);
+
+
+    </script>
+
+
+</body>
+
+</html>

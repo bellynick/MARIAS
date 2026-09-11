@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Tarana Burke</title>
+
+    <link rel="stylesheet" href="historias.css">
+
+</head>
+
+
+<body>
+
+    <main class="pagina">
+
+        <div class="conteudo">
+
+            <header class="cabecalho">
+
+                <div>
+                    <h1>Tarana Burke</h1>
+                    <p>Uma história para conhecer</p>
+                </div>
+
+            </header>
+
+
+            <section class="historia">
+
+                <div class="lado-imagem">
+
+                    <div class="imagem-container">
+
+                        <img
+                            id="imagemHistoria"
+                            src="https://tse3.mm.bing.net/th/id/OIP.SXzIfBoTYAavi2Vn0IG_7QHaJ3?w=1000&h=1333&rs=1&pid=ImgDetMain&o=7&rm=3"
+                            alt="Tarana Burke"
+                        >
+
+
+                        <div class="indicadores">
+
+                            <span class="ponto ativo"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="texto-historia">
+
+                    <div
+                        class="numero"
+                        id="numeroSlide"
+                    >
+                        01 / 05
+                    </div>
+
+
+                    <h2 id="tituloHistoria">
+                        Quem é Tarana Burke?
+                    </h2>
+
+
+                    <p id="textoHistoria">
+                        Tarana Burke é uma ativista, organizadora
+                        comunitária e defensora dos direitos humanos
+                        norte-americana, reconhecida mundialmente
+                        como fundadora do movimento Me Too.
+                    </p>
+
+
+                    <p id="textoHistoria2">
+                        Sua trajetória é marcada pela defesa de
+                        sobreviventes de violência sexual e pela
+                        criação de espaços de apoio e solidariedade.
+                    </p>
+
+
+                    <div class="informacao">
+
+                        <strong id="destaque">
+                            Uma voz para sobreviventes
+                        </strong>
+
+                        <p id="textoDestaque">
+                            Tarana dedicou sua atuação a dar visibilidade
+                            às experiências de pessoas que muitas vezes
+                            não eram ouvidas.
+                        </p>
+
+                    </div>
+
+
+                    <div class="controles">
+
+                        <button
+                            class="botao-anterior"
+                            onclick="voltarSlide()"
+                        >
+                            ← Anterior
+                        </button>
+
+
+                        <button
+                            class="botao-proximo"
+                            onclick="proximoSlide()"
+                        >
+                            Próximo →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <nav class="barra-navegacao">
+
+            <a
+                href="historias.html"
+                class="nav-item ativo"
+            >
+                <span>⌂</span>
+                <small>Início</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>⌕</span>
+                <small>Buscar</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="botao-central"
+            >
+                +
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>♡</span>
+                <small>Favoritos</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>☰</span>
+                <small>Sobre</small>
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <script>
+
+        const slides = [
+
+            {
+                imagem:
+                    "https://tse3.mm.bing.net/th/id/OIP.SXzIfBoTYAavi2Vn0IG_7QHaJ3?w=1000&h=1333&rs=1&pid=ImgDetMain&o=7&rm=3",
+
+                titulo:
+                    "Quem é Tarana Burke?",
+
+                texto:
+                    "Tarana Burke é uma ativista, organizadora comunitária e defensora dos direitos humanos norte-americana, reconhecida mundialmente como fundadora do movimento Me Too.",
+
+                texto2:
+                    "Sua trajetória é marcada pela defesa de sobreviventes de violência sexual e pela criação de espaços de apoio e solidariedade.",
+
+                destaque:
+                    "Uma voz para sobreviventes",
+
+                textoDestaque:
+                    "Tarana dedicou sua atuação a dar visibilidade às experiências de pessoas que muitas vezes não eram ouvidas."
+            },
+
+
+            {
+                imagem:
+                    "https://tse3.mm.bing.net/th/id/OIP.SXzIfBoTYAavi2Vn0IG_7QHaJ3?w=1000&h=1333&rs=1&pid=ImgDetMain&o=7&rm=3",
+
+                titulo:
+                    "A criação do Me Too",
+
+                texto:
+                    "Em 2006, Tarana Burke criou a expressão \"Me Too\" como uma ferramenta de empoderamento e solidariedade para sobreviventes de violência sexual.",
+
+                texto2:
+                    "A iniciativa buscava mostrar às sobreviventes que elas não estavam sozinhas e que suas histórias mereciam ser ouvidas.",
+
+                destaque:
+                    "2006",
+
+                textoDestaque:
+                    "Tarana criou o movimento mais de dez anos antes de a expressão se tornar mundialmente conhecida nas redes sociais."
+            },
+
+
+            {
+                imagem:
+                    "https://tse3.mm.bing.net/th/id/OIP.SXzIfBoTYAavi2Vn0IG_7QHaJ3?w=1000&h=1333&rs=1&pid=ImgDetMain&o=7&rm=3",
+
+                titulo:
+                    "Um movimento mundial",
+
+                texto:
+                    "Em 2017, a hashtag #MeToo ganhou enorme repercussão nas redes sociais e passou a ser utilizada por pessoas de diferentes partes do mundo.",
+
+                texto2:
+                    "O movimento trouxe para o debate público relatos de assédio e violência sexual e ajudou a ampliar as conversas sobre esses problemas.",
+
+                destaque:
+                    "2017",
+
+                textoDestaque:
+                    "O movimento Me Too alcançou repercussão internacional e tornou-se um importante símbolo de solidariedade às sobreviventes."
+            },
+
+
+            {
+                imagem:
+                    "https://tse3.mm.bing.net/th/id/OIP.SXzIfBoTYAavi2Vn0IG_7QHaJ3?w=1000&h=1333&rs=1&pid=ImgDetMain&o=7&rm=3",
+
+                titulo:
+                    "Sua luta e seus desafios",
+
+                texto:
+                    "Tarana enfrentou o desafio de dar visibilidade às vítimas de violência sexual em uma sociedade onde muitas dessas histórias permaneciam em silêncio.",
+
+                texto2:
+                    "Além do movimento Me Too, fundou a organização Just Be Inc., dedicada ao apoio e ao desenvolvimento de meninas negras.",
+
+                destaque:
+                    "Just Be Inc.",
+
+                textoDestaque:
+                    "A organização foi criada para oferecer apoio e fortalecer meninas negras, especialmente aquelas que enfrentam situações de vulnerabilidade."
+            },
+
+
+            {
+                imagem:
+                    "https://tse3.mm.bing.net/th/id/OIP.SXzIfBoTYAavi2Vn0IG_7QHaJ3?w=1000&h=1333&rs=1&pid=ImgDetMain&o=7&rm=3",
+
+                titulo:
+                    "O legado de Tarana Burke",
+
+                texto:
+                    "Tarana continua trabalhando para dar visibilidade às vítimas de violência sexual e defender uma sociedade com mais justiça e apoio às sobreviventes.",
+
+                texto2:
+                    "Seu trabalho foi reconhecido internacionalmente, inclusive pela revista Time, que a incluiu entre as \"Silence Breakers\".",
+
+                destaque:
+                    "Frase",
+
+                textoDestaque:
+                    "\"O 'Me Too' não é apenas uma hashtag; é o começo de uma conversa e o início de um caminho para a cura.\""
+            }
+
+        ];
+
+
+        let slideAtual = 0;
+
+        
+        const numero =
+            document.getElementById("numeroSlide");
+
+        const titulo =
+            document.getElementById("tituloHistoria");
+
+        const texto =
+            document.getElementById("textoHistoria");
+
+        const texto2 =
+            document.getElementById("textoHistoria2");
+
+        const destaque =
+            document.getElementById("destaque");
+
+        const textoDestaque =
+            document.getElementById("textoDestaque");
+
+        const pontos =
+            document.querySelectorAll(".ponto");
+
+
+        function mostrarSlide(indice) {
+
+            slideAtual =
+                (indice + slides.length) % slides.length;
+
+
+            const slide =
+                slides[slideAtual];
+
+
+            imagem.style.opacity = "0";
+
+
+            setTimeout(() => {
+
+                imagem.src = slide.imagem;
+
+                imagem.alt = slide.titulo;
+
+                imagem.style.opacity = "1";
+
+            }, 250);
+
+
+            numero.textContent =
+                "0" + (slideAtual + 1) +
+                " / 0" + slides.length;
+
+
+            titulo.textContent =
+                slide.titulo;
+
+
+            texto.textContent =
+                slide.texto;
+
+
+            texto2.textContent =
+                slide.texto2;
+
+
+            destaque.textContent =
+                slide.destaque;
+
+
+            textoDestaque.textContent =
+                slide.textoDestaque;
+
+
+            pontos.forEach((ponto, index) => {
+
+                ponto.classList.toggle(
+                    "ativo",
+                    index === slideAtual
+                );
+
+            });
+
+        }
+
+
+        function proximoSlide() {
+
+            mostrarSlide(
+                slideAtual + 1
+            );
+
+        }
+
+
+        function voltarSlide() {
+
+            mostrarSlide(
+                slideAtual - 1
+            );
+
+        }
+
+
+        // Troca automática a cada 7 segundos
+
+        setInterval(() => {
+
+            proximoSlide();
+
+        }, 7000);
+
+
+    </script>
+
+</body>
+
+</html>

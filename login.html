@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entrar</title>
+
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+
+
+        <!-- LADO DIREITO -->
+        <section class="lado-direito">
+
+            <div class="formulario">
+
+                <h1>MARIAS</h1>
+
+                <h2>Login</h2>
+
+                <p class="subtitulo">
+                    Entre na sua conta para continuar
+                </p>
+
+
+                <form id="formLogin">
+
+                    <!-- EMAIL OU USUÁRIO -->
+                    <div class="campo">
+
+                        <label for="login">
+
+                            E-mail ou nome de usuário
+
+                        </label>
+
+                        <input
+                            type="text"
+                            id="login"
+                            placeholder="Digite seu e-mail ou usuário"
+                        >
+
+                        <small
+                            id="erroLogin"
+                            class="erro"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- SENHA -->
+                    <div class="campo">
+
+                        <label for="senhaLogin">
+                            Senha
+                        </label>
+
+                        <input
+                            type="password"
+                            id="senhaLogin"
+                            placeholder="Digite sua senha"
+                        >
+
+                        <small
+                            id="erroSenhaLogin"
+                            class="erro"
+                        ></small>
+
+                    </div>
+
+
+                    <!-- ESQUECI SENHA -->
+                    <div class="esqueci">
+
+                        <a href="#">
+                            Esqueci minha senha
+                        </a>
+
+                    </div>
+
+
+                    <!-- BOTÃO -->
+                    <button
+                        type="submit"
+                        class="botao"
+                    >
+                        Entrar
+                    </button>
+
+                </form>
+
+
+                <!-- IR PARA CADASTRO -->
+                <p class="login">
+
+                    Ainda não possui uma conta?
+
+                    <a href="cadastro.html">
+                        Criar conta
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

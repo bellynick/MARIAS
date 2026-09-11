@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual Maria você é?</title>
+
+
+<link rel="stylesheet" href="maria-quiz.css">
+
+
+</head>
+
+<body>
+
+
+<main class="quiz-container">
+
+    <div class="intro">
+        <span class="logo">MARIAS</span>
+
+        <h1>Qual Maria você é?</h1>
+
+        <p>
+            Descubra qual grande mulher da história
+            mais combina com a sua personalidade!
+        </p>
+
+        <button id="startBtn">Começar quiz</button>
+    </div>
+
+    <section id="quiz" class="quiz hidden">
+
+        <div class="topo">
+            <span id="numeroPergunta">Pergunta 1 de 6</span>
+            <div class="barra">
+                <div id="progresso"></div>
+            </div>
+        </div>
+
+        <h2 id="pergunta"></h2>
+
+        <div id="opcoes" class="opcoes"></div>
+
+    </section>
+
+    <section id="resultado" class="resultado hidden">
+
+        <p class="resultado-titulo">SEU RESULTADO</p>
+
+        <div class="foto-mulher" id="fotoMulher">
+            <span id="inicial"></span>
+        </div>
+
+        <h2 id="nomeResultado"></h2>
+
+        <p id="descricaoResultado"></p>
+
+        <button onclick="reiniciarQuiz()">Fazer novamente ↻</button>
+
+    </section>
+
+</main>
+
+
+<!-- BARRA DE NAVEGAÇÃO -->
+<nav class="barra-navegacao">
+
+    <!-- INÍCIO -->
+    <a href="historias.html" class="nav-item ativo">
+        <span>⌂</span>
+        <small>Início</small>
+    </a>
+
+
+    <!-- BUSCAR -->
+    <button
+        class="nav-item botao-buscar"
+        id="botao-pesquisa"
+        type="button">
+
+        <span>⌕</span>
+        <small>Buscar</small>
+
+    </button>
+        
+
+    <!-- QUAL MARIA VOCÊ SERIA -->
+    <a
+        href="maria-quiz.html"
+        class="botao-central"
+        aria-label="Qual Maria você seria?">
+
+        +
+
+    </a>
+
+
+    <!-- LIVROS E FILMES -->
+    <a
+        href="marias-em-foco.html"
+        class="nav-item">
+
+        <span>♡</span>
+        <small>Livros e filmes</small>
+
+    </a>
+
+
+    <!-- SOBRE O SITE -->
+    <a
+        href="sobre.html"
+        class="nav-item">
+
+        <span>☰</span>
+        <small>Sobre</small>
+
+
+    </a>
+
+</nav>
+
+
+<script src="maria-quiz.js"></script>
+
+
+</body>
+</html>

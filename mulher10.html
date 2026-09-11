@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Melanie Klein</title>
+
+    <link rel="stylesheet" href="historias.css">
+
+</head>
+
+
+<body>
+
+    <main class="pagina">
+
+        <div class="conteudo">
+
+            <header class="cabecalho">
+
+                <div>
+                    <h1>Melanie Klein</h1>
+                    <p>Uma história para conhecer</p>
+                </div>
+
+            </header>
+
+
+            <section class="historia">
+
+                <!-- IMAGEM -->
+
+                <div class="lado-imagem">
+
+                    <div class="imagem-container">
+
+                        <img
+                            id="imagemHistoria"
+                            src="https://i.pinimg.com/736x/2d/b7/6d/2db76d214437f1bb1a61de17b7e19e0f.jpg"
+                            alt="Melanie Klein"
+                        >
+
+                        <div class="indicadores">
+
+                            <span class="ponto ativo"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TEXTO -->
+
+                <div class="texto-historia">
+
+                    <div
+                        class="numero"
+                        id="numeroSlide"
+                    >
+                        01 / 05
+                    </div>
+
+
+                    <h2 id="tituloHistoria">
+                        Quem foi Melanie Klein?
+                    </h2>
+
+
+                    <p id="textoHistoria">
+                        Melanie Klein foi uma importante psicanalista
+                        austríaca-britânica, nascida em 1882.
+                        Ela se tornou uma das principais figuras da
+                        psicanálise infantil.
+                    </p>
+
+
+                    <p id="textoHistoria2">
+                        Klein dedicou grande parte de seu trabalho à
+                        compreensão dos pensamentos, emoções e
+                        relações das crianças.
+                    </p>
+
+
+                    <div class="informacao">
+
+                        <strong id="destaque">
+                            Uma pioneira
+                        </strong>
+
+                        <p id="textoDestaque">
+                            Suas ideias ajudaram a transformar a forma
+                            como a infância era compreendida dentro
+                            da psicanálise.
+                        </p>
+
+                    </div>
+
+
+                    <div class="controles">
+
+                        <button
+                            class="botao-anterior"
+                            onclick="voltarSlide()"
+                        >
+                            ← Anterior
+                        </button>
+
+                        <button
+                            class="botao-proximo"
+                            onclick="proximoSlide()"
+                        >
+                            Próximo →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="barra-navegacao">
+
+            <a
+                href="historias.html"
+                class="nav-item ativo"
+            >
+                <span>⌂</span>
+                <small>Início</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>⌕</span>
+                <small>Buscar</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="botao-central"
+            >
+                +
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>♡</span>
+                <small>Favoritos</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>☰</span>
+                <small>Sobre</small>
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const slides = [
+
+            {
+                imagem: "https://i.pinimg.com/736x/2d/b7/6d/2db76d214437f1bb1a61de17b7e19e0f.jpg",
+
+                titulo: "Quem foi Melanie Klein?",
+
+                texto:
+                    "Melanie Klein foi uma importante psicanalista austríaca-britânica, nascida em 1882. Ela se tornou uma das principais figuras da psicanálise infantil.",
+
+                texto2:
+                    "Klein dedicou grande parte de seu trabalho à compreensão dos pensamentos, emoções e relações das crianças.",
+
+                destaque:
+                    "Uma pioneira",
+
+                textoDestaque:
+                    "Suas ideias ajudaram a transformar a forma como a infância era compreendida dentro da psicanálise."
+            },
+
+
+            {
+                imagem: "https://i.pinimg.com/736x/2d/b7/6d/2db76d214437f1bb1a61de17b7e19e0f.jpg",
+
+                titulo: "O trabalho com crianças",
+
+                texto:
+                    "Melanie Klein encontrou na psicanálise uma área de grande interesse e passou a trabalhar especialmente com crianças.",
+
+                texto2:
+                    "Uma de suas principais contribuições foi utilizar o brincar como uma forma de compreender o mundo interno infantil.",
+
+                destaque:
+                    "A técnica do brincar",
+
+                textoDestaque:
+                    "Para Klein, as brincadeiras poderiam revelar sentimentos, fantasias, medos e conflitos presentes na mente da criança."
+            },
+
+
+            {
+                imagem: "https://i.pinimg.com/736x/2d/b7/6d/2db76d214437f1bb1a61de17b7e19e0f.jpg",
+
+                titulo: "Novas ideias na psicanálise",
+
+                texto:
+                    "Klein desenvolveu conceitos importantes para explicar o desenvolvimento emocional das crianças.",
+
+                texto2:
+                    "Entre suas principais ideias estão as posições esquizo-paranoide e depressiva, conceitos que passaram a ocupar um lugar importante na tradição kleiniana.",
+
+                destaque:
+                    "Novas perspectivas",
+
+                textoDestaque:
+                    "Suas teorias ajudaram a ampliar os estudos sobre ansiedade, relações afetivas e desenvolvimento emocional."
+            },
+
+
+            {
+                imagem: "https://i.pinimg.com/736x/2d/b7/6d/2db76d214437f1bb1a61de17b7e19e0f.jpg",
+
+                titulo: "Críticas e desafios",
+
+                texto:
+                    "As ideias de Melanie Klein provocaram debates e encontraram resistência dentro da própria comunidade psicanalítica.",
+
+                texto2:
+                    "Entre 1941 e 1945, ela participou das chamadas Grandes Controvérsias da Sociedade Britânica de Psicanálise.",
+
+                destaque:
+                    "Grandes Controvérsias",
+
+                textoDestaque:
+                    "Os debates mostraram a forte divisão entre diferentes perspectivas sobre o desenvolvimento infantil e a prática da psicanálise."
+            },
+
+
+            {
+                imagem: "https://i.pinimg.com/736x/2d/b7/6d/2db76d214437f1bb1a61de17b7e19e0f.jpg",
+
+                titulo: "Legado de Melanie Klein",
+
+                texto:
+                    "Melanie Klein deixou uma influência duradoura na psicanálise, especialmente nos estudos sobre a infância.",
+
+                texto2:
+                    "Em 1932, publicou A Psicanálise de Crianças, uma de suas obras mais importantes. Suas ideias deram origem à chamada Escola Kleiniana.",
+
+                destaque:
+                    "Um legado duradouro",
+
+                textoDestaque:
+                    "Seu trabalho influenciou gerações de psicanalistas e contribuiu para novas formas de compreender a vida emocional das crianças."
+            }
+
+        ];
+
+
+        let slideAtual = 0;
+
+
+
+        const numero =
+            document.getElementById("numeroSlide");
+
+        const titulo =
+            document.getElementById("tituloHistoria");
+
+        const texto =
+            document.getElementById("textoHistoria");
+
+        const texto2 =
+            document.getElementById("textoHistoria2");
+
+        const destaque =
+            document.getElementById("destaque");
+
+        const textoDestaque =
+            document.getElementById("textoDestaque");
+
+        const pontos =
+            document.querySelectorAll(".ponto");
+
+
+        function mostrarSlide(indice) {
+
+            slideAtual =
+                (indice + slides.length) % slides.length;
+
+
+            const slide =
+                slides[slideAtual];
+
+
+            imagem.style.opacity = "0";
+
+
+            setTimeout(() => {
+
+                imagem.src = slide.imagem;
+
+                imagem.alt = slide.titulo;
+
+                imagem.style.opacity = "1";
+
+            }, 250);
+
+
+            numero.textContent =
+                "0" +
+                (slideAtual + 1) +
+                " / 0" +
+                slides.length;
+
+
+            titulo.textContent =
+                slide.titulo;
+
+
+            texto.textContent =
+                slide.texto;
+
+
+            texto2.textContent =
+                slide.texto2;
+
+
+            destaque.textContent =
+                slide.destaque;
+
+
+            textoDestaque.textContent =
+                slide.textoDestaque;
+
+
+            pontos.forEach((ponto, index) => {
+
+                ponto.classList.toggle(
+                    "ativo",
+                    index === slideAtual
+                );
+
+            });
+
+        }
+
+
+        function proximoSlide() {
+
+            mostrarSlide(
+                slideAtual + 1
+            );
+
+        }
+
+
+        function voltarSlide() {
+
+            mostrarSlide(
+                slideAtual - 1
+            );
+
+        }
+
+
+        /* PASSA AUTOMATICAMENTE A CADA 7 SEGUNDOS */
+
+        setInterval(() => {
+
+            proximoSlide();
+
+        }, 7000);
+
+    </script>
+
+</body>
+
+</html>

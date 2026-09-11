@@ -1,0 +1,971 @@
+/* =========================================================
+   PROJETO MARIAS — LIVROS E FILMES
+   PALETA OFICIAL
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================= */
+/* BODY */
+/* ========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(200, 154, 160, 0.20),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(166, 77, 90, 0.12),
+            transparent 30%
+        ),
+        #F3EDE0;
+
+    color: #2B2B2B;
+
+    padding-bottom: 100px;
+}
+
+
+/* ========================= */
+/* CABEÇALHO */
+/* ========================= */
+
+.cabecalho {
+    background:
+        linear-gradient(
+            135deg,
+            #6D2D3A,
+            #832F42
+        );
+
+    padding: 25px 8%;
+
+    border-bottom: 2px solid #C8A25A;
+
+    color: #F3EDE0;
+
+    box-shadow:
+        0 5px 20px rgba(43, 43, 43, 0.12);
+}
+
+
+.titulo-area {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.icone-livro {
+    font-size: 38px;
+
+    filter:
+        drop-shadow(
+            0 2px 3px rgba(43, 43, 43, 0.25)
+        );
+}
+
+
+.cabecalho h1 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    margin-bottom: 4px;
+
+    letter-spacing: 0.5px;
+}
+
+
+.cabecalho p {
+    color: #D8C8A9;
+
+    font-size: 14px;
+}
+
+
+/* ========================= */
+/* CONTEÚDO */
+/* ========================= */
+
+main {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 40px 6%;
+}
+
+
+/* ========================= */
+/* INTRODUÇÃO */
+/* ========================= */
+
+.introducao {
+    width: 100%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #F3EDE0,
+            #E9DDC8
+        );
+
+    border: 1px solid rgba(200, 162, 90, 0.30);
+
+    border-radius: 22px;
+
+    padding: 35px;
+
+    margin-bottom: 45px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px rgba(43, 43, 43, 0.08);
+
+    position: relative;
+}
+
+
+/* detalhe dourado */
+
+.introducao::before {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 3px;
+
+    margin: 0 auto 20px;
+
+    background: #C8A25A;
+
+    border-radius: 10px;
+}
+
+
+.introducao h2 {
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    margin-bottom: 15px;
+
+    color: #6D2D3A;
+}
+
+
+.introducao p {
+    color: #4A3A3D;
+
+    max-width: 750px;
+
+    margin: auto;
+
+    line-height: 1.7;
+}
+
+
+/* ========================= */
+/* SEÇÕES */
+/* ========================= */
+
+.secao {
+    width: 100%;
+
+    margin-bottom: 60px;
+}
+
+
+.titulo-secao {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    position: relative;
+}
+
+
+.titulo-secao > span {
+    font-size: 32px;
+
+    color: #A64D5A;
+}
+
+
+.titulo-secao h2 {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    color: #6D2D3A;
+}
+
+
+.titulo-secao p {
+    color: #6B625D;
+
+    margin-top: 4px;
+}
+
+
+/* ========================= */
+/* CARDS */
+/* ========================= */
+
+.grade-cards {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+
+/* ========================= */
+/* CARD */
+/* ========================= */
+
+.card {
+    width: 100%;
+
+    min-width: 0;
+
+    background: #F3EDE0;
+
+    border: 1px solid rgba(200, 162, 90, 0.22);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 5px 18px rgba(43, 43, 43, 0.09);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(200, 162, 90, 0.70);
+
+    box-shadow:
+        0 12px 25px rgba(43, 43, 43, 0.15);
+}
+
+
+/* ========================= */
+/* CAPAS */
+/* ========================= */
+
+.capa {
+    width: 100%;
+
+    height: 360px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #D8C8A9,
+            #E9DDC8
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* imagens */
+
+.capa img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    display: block;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.card:hover .capa img {
+    transform: scale(1.04);
+}
+
+
+/* ========================= */
+/* TIPO */
+/* ========================= */
+
+.tipo {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #F3EDE0;
+
+    z-index: 2;
+
+    box-shadow:
+        0 3px 8px rgba(43, 43, 43, 0.20);
+}
+
+
+.tipo.livro {
+    background: #6B6E4E;
+}
+
+
+.tipo.filme {
+    background: #6D2D3A;
+}
+
+
+/* ========================= */
+/* CAPA SEM IMAGEM */
+/* ========================= */
+
+.capa-sem-imagem {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6D2D3A,
+            #4F202A
+        );
+
+    color: #F3EDE0;
+}
+
+
+.capa-personagem {
+    padding: 20px;
+
+    position: relative;
+}
+
+
+/* detalhe dourado */
+
+.capa-personagem::before,
+.capa-personagem::after {
+    content: "✦";
+
+    position: absolute;
+
+    color: #C8A25A;
+
+    font-size: 14px;
+}
+
+
+.capa-personagem::before {
+    top: 0;
+    left: 0;
+}
+
+
+.capa-personagem::after {
+    bottom: 0;
+    right: 0;
+}
+
+
+.capa-personagem span {
+    display: block;
+
+    font-size: 38px;
+
+    letter-spacing: 4px;
+
+    font-weight: 300;
+
+    color: #C89AA0;
+}
+
+
+.capa-personagem strong {
+    display: block;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    letter-spacing: 3px;
+
+    margin-top: 5px;
+
+    color: #F3EDE0;
+}
+
+
+.capa-personagem small {
+    display: block;
+
+    margin-top: 25px;
+
+    color: #D8C8A9;
+
+    font-size: 12px;
+}
+
+
+/* ========================= */
+/* CONTEÚDO DO CARD */
+/* ========================= */
+
+.card-conteudo {
+    width: 100%;
+
+    padding: 22px;
+}
+
+
+.card-conteudo h3 {
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    margin-bottom: 6px;
+
+    color: #6D2D3A;
+}
+
+
+.card-conteudo h4 {
+    font-size: 15px;
+
+    color: #5D4B4F;
+
+    margin-bottom: 10px;
+}
+
+
+.mulher {
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #A64D5A;
+
+    margin-bottom: 13px;
+}
+
+
+.card-conteudo > p:not(.mulher) {
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    color: #5A5051;
+
+    min-height: 90px;
+}
+
+
+/* ========================= */
+/* BOTÃO DO CARD */
+/* ========================= */
+
+.card-conteudo button {
+    width: 100%;
+
+    border: 1px solid #C8A25A;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6D2D3A,
+            #832F42
+        );
+
+    color: #F3EDE0;
+
+    padding: 13px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+
+.card-conteudo button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #A64D5A,
+            #6D2D3A
+        );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(43, 43, 43, 0.18);
+}
+
+
+.card-conteudo button:focus-visible {
+    outline: 2px solid #C8A25A;
+
+    outline-offset: 3px;
+}
+
+
+/* ========================= */
+/* FRASE */
+/* ========================= */
+
+.frase {
+    width: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6D2D3A,
+            #4F202A
+        );
+
+    color: #F3EDE0;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    padding: 45px 30px;
+
+    margin-top: 40px;
+
+    border: 1px solid rgba(200, 162, 90, 0.45);
+
+    box-shadow:
+        0 10px 25px rgba(43, 43, 43, 0.15);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* decoração */
+
+.frase::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 18px;
+    left: 25px;
+
+    color: #C8A25A;
+
+    font-size: 18px;
+}
+
+
+.frase::after {
+    content: "✦";
+
+    position: absolute;
+
+    bottom: 18px;
+    right: 25px;
+
+    color: #C8A25A;
+
+    font-size: 18px;
+}
+
+
+.aspas {
+    font-family: Georgia, serif;
+
+    font-size: 60px;
+
+    line-height: 30px;
+
+    color: #C89AA0;
+}
+
+
+.frase p {
+    font-family: Georgia, serif;
+
+    font-size: 21px;
+
+    max-width: 700px;
+
+    margin: 20px auto;
+
+    line-height: 1.5;
+}
+
+
+.frase span {
+    color: #D8C8A9;
+
+    font-size: 13px;
+}
+
+
+/* ========================= */
+/* MENU INFERIOR */
+/* ========================= */
+
+.barra-navegacao {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 75px;
+
+    background:
+        linear-gradient(
+            to right,
+            #6D2D3A,
+            #832F42,
+            #6D2D3A
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 45px;
+
+    border-top: 2px solid #C8A25A;
+
+    box-shadow:
+        0 -5px 20px rgba(43, 43, 43, 0.18);
+
+    z-index: 1000;
+}
+
+
+.nav-item {
+    text-decoration: none;
+
+    color: #D8C8A9;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 3px;
+
+    transition: 0.2s ease;
+}
+
+
+.nav-item span {
+    font-size: 22px;
+}
+
+
+.nav-item small {
+    font-size: 11px;
+
+    color: #F3EDE0;
+}
+
+
+.nav-item:hover,
+.nav-item.ativo {
+    color: #C8A25A;
+
+    transform: translateY(-2px);
+}
+
+
+.nav-item:hover small,
+.nav-item.ativo small {
+    color: #C8A25A;
+}
+
+
+/* ========================= */
+/* BOTÃO CENTRAL */
+/* ========================= */
+
+.botao-central {
+    width: 52px;
+
+    height: 52px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #C89AA0,
+            #A64D5A
+        );
+
+    color: #F3EDE0;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-size: 30px;
+
+    margin-top: -25px;
+
+    border: 3px solid #F3EDE0;
+
+    box-shadow:
+        0 5px 15px rgba(43, 43, 43, 0.25),
+        0 0 0 1px #C8A25A;
+
+    transition: 0.2s ease;
+}
+
+
+.botao-central:hover {
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #D0A5AA,
+            #A64D5A
+        );
+
+    box-shadow:
+        0 8px 20px rgba(43, 43, 43, 0.30),
+        0 0 0 2px #C8A25A;
+}
+
+
+/* ========================= */
+/* RESPONSIVO — TABLET */
+/* ========================= */
+
+@media (max-width: 1000px) {
+
+    .grade-cards {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ========================= */
+/* RESPONSIVO — CELULAR */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 30px 5%;
+    }
+
+
+    .grade-cards {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cabecalho {
+        padding: 22px 6%;
+    }
+
+
+    .cabecalho h1 {
+        font-size: 24px;
+    }
+
+
+    .cabecalho p {
+        font-size: 13px;
+    }
+
+
+    .icone-livro {
+        font-size: 30px;
+    }
+
+
+    .introducao {
+        padding: 28px 22px;
+    }
+
+
+    .introducao h2 {
+        font-size: 23px;
+    }
+
+
+    .titulo-secao {
+        align-items: flex-start;
+    }
+
+
+    .titulo-secao h2 {
+        font-size: 22px;
+    }
+
+
+    .titulo-secao > span {
+        font-size: 27px;
+    }
+
+
+    .capa {
+        height: 380px;
+    }
+
+
+    .card-conteudo {
+        padding: 20px;
+    }
+
+
+    .frase {
+        padding: 38px 22px;
+    }
+
+
+    .frase p {
+        font-size: 18px;
+    }
+
+
+    .barra-navegacao {
+        height: 70px;
+
+        gap: 25px;
+    }
+
+
+    .nav-item span {
+        font-size: 21px;
+    }
+
+
+    .nav-item small {
+        font-size: 10px;
+    }
+
+
+    .botao-central {
+        width: 50px;
+        height: 50px;
+
+        font-size: 27px;
+    }
+}
+
+
+/* ========================= */
+/* CELULARES PEQUENOS */
+/* ========================= */
+
+@media (max-width: 380px) {
+
+    main {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+
+    .cabecalho h1 {
+        font-size: 21px;
+    }
+
+
+    .titulo-secao h2 {
+        font-size: 20px;
+    }
+
+
+    .capa {
+        height: 340px;
+    }
+
+
+    .barra-navegacao {
+        gap: 15px;
+    }
+
+
+    .nav-item {
+        width: 50px;
+    }
+}

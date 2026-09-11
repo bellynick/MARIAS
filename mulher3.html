@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Princesa Diana</title>
+
+<link rel="stylesheet" href="historias.css">
+
+</head>
+
+<body>
+
+<main class="pagina">
+
+    <div class="conteudo">
+
+        <header class="cabecalho">
+
+            <div>
+
+                <h1>Princesa Diana</h1>
+
+                <p>Uma história para conhecer</p>
+
+            </div>
+
+        </header>
+
+
+        <!-- HISTÓRIA -->
+
+        <section class="historia">
+
+
+            <!-- LADO DA IMAGEM -->
+
+            <div class="lado-imagem">
+
+                <div class="imagem-container">
+
+                    <img
+                        id="imagemHistoria"
+                        src="https://media.vogue.mx/photos/5d7f696796e6be0008500c35/2:3/w_2560%2Cc_limit/Tendencia-Princesa-Diana.jpg"
+                        alt="Princesa Diana"
+                    >
+
+
+                </div>
+
+
+                <!-- INDICADORES -->
+
+                <div class="indicadores">
+
+                    <span class="ponto ativo"></span>
+
+                    <span class="ponto"></span>
+
+                    <span class="ponto"></span>
+
+                    <span class="ponto"></span>
+
+                    <span class="ponto"></span>
+
+                </div>
+
+            </div>
+
+
+            <!-- LADO DO TEXTO -->
+
+            <div class="texto-historia">
+
+
+                <p
+                    class="numero"
+                    id="numeroSlide"
+                >
+                    01 / 05
+                </p>
+
+
+                <h2 id="tituloHistoria">
+                    Quem foi a Princesa Diana?
+                </h2>
+
+
+                <p id="textoHistoria">
+
+                    Princesa Diana nasceu em 1º de julho de 1961,
+                    na Inglaterra. Tornou-se mundialmente conhecida
+                    ao se casar com o então príncipe Charles,
+                    entrando para a família real do Reino Unido.
+
+                </p>
+
+
+                <p id="textoHistoria2">
+
+                    Mesmo após o divórcio, Diana continuou sendo
+                    uma figura pública muito influente, destacando-se
+                    por seu trabalho humanitário.
+
+                </p>
+
+
+                <div class="informacao">
+
+                    <strong id="destaque">
+                        A Princesa do Povo
+                    </strong>
+
+
+                    <p id="textoDestaque">
+
+                        Sua empatia e proximidade com as pessoas
+                        fizeram com que Diana recebesse o apelido
+                        de "Princesa do Povo".
+
+                    </p>
+
+                </div>
+
+
+                <!-- BOTÕES -->
+
+                <div class="controles">
+
+
+                    <button
+                        class="botao-anterior"
+                        onclick="voltarSlide()"
+                    >
+                        ← Anterior
+                    </button>
+
+
+                    <button
+                        class="botao-proximo"
+                        onclick="proximoSlide()"
+                    >
+                        Próximo →
+                    </button>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <!-- BARRA DE NAVEGAÇÃO -->
+
+    <nav class="barra-navegacao">
+
+
+        <a
+            href="historias.html"
+            class="nav-item ativo"
+        >
+
+            <span>⌂</span>
+
+            <small>Início</small>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+
+            <span>⌕</span>
+
+            <small>Buscar</small>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="botao-central"
+        >
+
+            +
+
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+
+            <span>♡</span>
+
+            <small>Favoritos</small>
+
+        </a>
+
+
+        <a
+            href="#"
+            class="nav-item"
+        >
+
+            <span>☰</span>
+
+            <small>Sobre</small>
+
+        </a>
+
+
+    </nav>
+
+</main>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+
+    const slides = [
+
+
+        /* SLIDE 1 */
+
+        {
+
+            imagem:
+                "https://media.vogue.mx/photos/5d7f696796e6be0008500c35/2:3/w_2560%2Cc_limit/Tendencia-Princesa-Diana.jpg",
+
+            titulo:
+                "Quem foi a Princesa Diana?",
+
+            texto1:
+                "Princesa Diana nasceu em 1º de julho de 1961, na Inglaterra. Tornou-se mundialmente conhecida ao se casar com o então príncipe Charles, entrando para a família real do Reino Unido.",
+
+            texto2:
+                "Mesmo após o divórcio, Diana continuou sendo uma figura pública muito influente, destacando-se por seu trabalho humanitário.",
+
+            destaque:
+                "A Princesa do Povo",
+
+            textoDestaque:
+                "Sua empatia e proximidade com as pessoas fizeram com que Diana recebesse o apelido de 'Princesa do Povo'."
+
+        },
+
+
+        /* SLIDE 2 */
+
+        {
+
+            titulo:
+                "A entrada na família real",
+
+            texto1:
+                "Em 1981, Diana se casou com Charles, então príncipe de Gales, em uma cerimônia acompanhada por milhões de pessoas ao redor do mundo.",
+
+            texto2:
+                "O casamento transformou Diana em uma das mulheres mais conhecidas internacionalmente e colocou sua vida sob intensa atenção da imprensa.",
+
+            destaque:
+                "Uma princesa mundialmente conhecida",
+
+            textoDestaque:
+                "Sua personalidade e sua maneira de se relacionar com o público fizeram dela uma das integrantes mais populares da família real britânica."
+
+        },
+
+
+        /* SLIDE 3 */
+
+        {
+
+            titulo:
+                "Seu trabalho humanitário",
+
+            texto1:
+                "Diana utilizou sua fama para chamar atenção para importantes questões sociais e humanitárias.",
+
+            texto2:
+                "Ela apoiou instituições de caridade e trabalhou para diminuir o preconceito contra pessoas com AIDS, além de defender outras causas sociais.",
+
+            destaque:
+                "Empatia e solidariedade",
+
+            textoDestaque:
+                "Diana ficou conhecida por se aproximar das pessoas que ajudava, utilizando sua visibilidade para dar atenção a causas pouco discutidas."
+
+        },
+
+
+        /* SLIDE 4 */
+
+        {
+
+            titulo:
+                "A campanha contra minas terrestres",
+
+            texto1:
+                "Em 1997, Diana visitou Angola e caminhou por uma área afetada por minas terrestres.",
+
+            texto2:
+                "A visita chamou a atenção internacional para os perigos das minas e para o impacto que elas causavam principalmente sobre a população civil.",
+
+            destaque:
+                "Uma causa que ganhou visibilidade",
+
+            textoDestaque:
+                "Sua atuação ajudou a aumentar a atenção da imprensa e do público internacional para a questão das minas terrestres."
+
+        },
+
+
+        /* SLIDE 5 */
+
+        {
+            
+            titulo:
+                "O legado de Diana",
+
+            texto1:
+                "Diana morreu em 31 de agosto de 1997, em Paris, após um acidente de carro.",
+
+            texto2:
+                "Sua morte provocou uma enorme comoção mundial. Até hoje, Diana é lembrada por seu trabalho humanitário, sua empatia e sua influência cultural.",
+
+            destaque:
+                "Um legado que permanece",
+
+            textoDestaque:
+                "Diana continua sendo lembrada como uma figura que utilizou sua popularidade para chamar atenção para causas humanitárias."
+
+        }
+
+    ];
+
+
+    let slideAtual = 0;
+
+
+    const numero =
+        document.getElementById("numeroSlide");
+
+
+    const titulo =
+        document.getElementById("tituloHistoria");
+
+
+    const texto1 =
+        document.getElementById("textoHistoria");
+
+
+    const texto2 =
+        document.getElementById("textoHistoria2");
+
+
+    const destaque =
+        document.getElementById("destaque");
+
+
+    const textoDestaque =
+        document.getElementById("textoDestaque");
+
+
+    const pontos =
+        document.querySelectorAll(".ponto");
+
+
+
+    function mostrarSlide(numeroSlide) {
+
+
+        slideAtual = numeroSlide;
+
+
+        const slide =
+            slides[slideAtual];
+
+        /* Troca os textos */
+
+        titulo.textContent =
+            slide.titulo;
+
+
+        texto1.textContent =
+            slide.texto1;
+
+
+        texto2.textContent =
+            slide.texto2;
+
+
+        destaque.textContent =
+            slide.destaque;
+
+
+        textoDestaque.textContent =
+            slide.textoDestaque;
+
+
+        /* Número da página */
+
+        numero.textContent =
+            "0" +
+            (slideAtual + 1) +
+            " / 0" +
+            slides.length;
+
+
+
+        /* Atualiza os indicadores */
+
+        pontos.forEach(
+            (ponto, index) => {
+
+                ponto.classList.remove(
+                    "ativo"
+                );
+
+
+                if (
+                    index === slideAtual
+                ) {
+
+                    ponto.classList.add(
+                        "ativo"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    /* PRÓXIMO SLIDE */
+
+    function proximoSlide() {
+
+
+        slideAtual++;
+
+
+        if (
+            slideAtual >= slides.length
+        ) {
+
+            slideAtual = 0;
+
+        }
+
+
+        mostrarSlide(
+            slideAtual
+        );
+
+    }
+
+
+
+    /* SLIDE ANTERIOR */
+
+    function voltarSlide() {
+
+
+        slideAtual--;
+
+
+        if (
+            slideAtual < 0
+        ) {
+
+            slideAtual =
+                slides.length - 1;
+
+        }
+
+
+        mostrarSlide(
+            slideAtual
+        );
+
+    }
+
+
+
+    /* TROCA AUTOMÁTICA */
+
+    setInterval(() => {
+
+        proximoSlide();
+
+    }, 7000);
+
+
+</script>
+```
+
+</body>
+
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Margaret Thatcher</title>
+
+    <link rel="stylesheet" href="historias.css">
+
+</head>
+
+
+<body>
+
+    <main class="pagina">
+
+        <div class="conteudo">
+
+            <header class="cabecalho">
+
+                <div>
+
+                    <h1>Margaret Thatcher</h1>
+
+                    <p>Uma história para conhecer</p>
+
+                </div>
+
+            </header>
+
+
+            <!-- SLIDES -->
+
+            <section class="historia">
+
+                <!-- LADO DAS IMAGENS -->
+
+                <div class="lado-imagem">
+
+                    <div class="imagem-container">
+
+                        <img
+                            id="imagemHistoria"
+                            src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Margaret_Thatcher_stock_portrait_%28cropped%29.jpg"
+                            alt="Margaret Thatcher"
+                        >
+
+                        
+                    </div>
+
+
+                    <!-- INDICADORES -->
+
+                    <div class="indicadores">
+
+                        <span class="ponto ativo"></span>
+                        <span class="ponto"></span>
+                        <span class="ponto"></span>
+                        <span class="ponto"></span>
+                        <span class="ponto"></span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LADO DO TEXTO -->
+
+                <div class="texto-historia">
+
+                    <p class="numero" id="numeroSlide">
+                        01 / 05
+                    </p>
+
+                    <h2 id="tituloHistoria">
+                        Quem foi Margaret Thatcher?
+                    </h2>
+
+
+                    <p id="textoHistoria">
+
+                        Margaret Thatcher foi uma importante líder
+                        política do Reino Unido. Nasceu em 13 de
+                        outubro de 1925, em Grantham.
+
+                    </p>
+
+
+                    <p id="textoHistoria2">
+
+                        Formou-se em Química pela Universidade de
+                        Oxford e posteriormente tornou-se advogada.
+                        Entrou para o Partido Conservador e iniciou
+                        sua trajetória na política.
+
+                    </p>
+
+
+                    <div class="informacao">
+
+                        <strong id="destaque">
+                            Primeira mulher Primeira-Ministra
+                        </strong>
+
+                        <p id="textoDestaque">
+
+                            Em 1979, Margaret Thatcher tornou-se a
+                            primeira mulher a ocupar o cargo de
+                            Primeira-Ministra do Reino Unido.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="controles">
+
+                        <button
+                            class="botao-anterior"
+                            onclick="voltarSlide()"
+                        >
+                            ← Anterior
+                        </button>
+
+
+                        <button
+                            class="botao-proximo"
+                            onclick="proximoSlide()"
+                        >
+                            Próximo →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- BARRA DE NAVEGAÇÃO -->
+
+        <nav class="barra-navegacao">
+
+            <a
+                href="historias.html"
+                class="nav-item ativo"
+            >
+
+                <span>⌂</span>
+
+                <small>Início</small>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span>⌕</span>
+
+                <small>Buscar</small>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="botao-central"
+            >
+
+                +
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span>♡</span>
+
+                <small>Favoritos</small>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span>☰</span>
+
+                <small>Sobre</small>
+
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const slides = [
+
+            {
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Margaret_Thatcher_stock_portrait_%28cropped%29.jpg",
+
+                titulo: "Quem foi Margaret Thatcher?",
+
+                texto1:
+                    "Margaret Thatcher foi uma importante líder política do Reino Unido. Nasceu em 13 de outubro de 1925, em Grantham.",
+
+                texto2:
+                    "Formou-se em Química pela Universidade de Oxford e posteriormente tornou-se advogada. Entrou para o Partido Conservador e iniciou sua trajetória na política.",
+
+                destaque:
+                    "Primeira mulher Primeira-Ministra",
+
+                textoDestaque:
+                    "Em 1979, Margaret Thatcher tornou-se a primeira mulher a ocupar o cargo de Primeira-Ministra do Reino Unido."
+            },
+
+
+            {
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Margaret_Thatcher_1983.jpg",
+
+                titulo: "A chegada ao poder",
+
+                texto1:
+                    "Em 1979, Margaret Thatcher venceu as eleições e tornou-se a primeira mulher a ocupar o cargo de Primeira-Ministra do Reino Unido.",
+
+                texto2:
+                    "Ela permaneceu no poder até 1990, tornando-se uma das figuras políticas mais importantes da história britânica.",
+
+                destaque:
+                    "11 anos no poder",
+
+                textoDestaque:
+                    "Thatcher governou o Reino Unido por aproximadamente 11 anos, sendo uma das líderes que permaneceram por mais tempo no cargo."
+            },
+
+
+            {
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Margaret_Thatcher_1982.jpg",
+
+                titulo: "A Guerra das Malvinas",
+
+                texto1:
+                    "Em 1982, o Reino Unido entrou em conflito com a Argentina pela disputa das Ilhas Malvinas.",
+
+                texto2:
+                    "Margaret Thatcher assumiu uma posição firme durante o conflito e apoiou as forças britânicas.",
+
+                destaque:
+                    "Guerra das Malvinas",
+
+                textoDestaque:
+                    "A vitória britânica fortaleceu a imagem política de Thatcher dentro do Reino Unido."
+            },
+
+
+            {
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Margaret_Thatcher_1988.jpg",
+
+                titulo: "A Dama de Ferro",
+
+                texto1:
+                    "Margaret Thatcher ficou conhecida mundialmente pelo apelido de 'Dama de Ferro', devido à sua postura firme e determinada.",
+
+                texto2:
+                    "Seu governo foi marcado por políticas econômicas liberais, privatizações e mudanças profundas na economia britânica.",
+
+                destaque:
+                    "Uma líder controversa",
+
+                textoDestaque:
+                    "Suas políticas provocaram tanto apoio quanto fortes críticas, deixando marcas profundas na sociedade britânica."
+            },
+
+
+            {
+                imagem: "https://upload.wikimedia.org/wikipedia/commons/6/69/Margaret_Thatcher_1990.jpg",
+
+                titulo: "Seu legado",
+
+                texto1:
+                    "Margaret Thatcher deixou um impacto significativo na política do Reino Unido e nas relações internacionais.",
+
+                texto2:
+                    "Também teve papel importante durante a fase final da Guerra Fria e manteve uma forte aliança com os Estados Unidos.",
+
+                destaque:
+                    "Um legado histórico",
+
+                textoDestaque:
+                    "Thatcher faleceu em 8 de abril de 2013, mas continua sendo uma das mulheres mais importantes da história política contemporânea."
+            }
+
+        ];
+
+
+        let slideAtual = 0;
+
+
+        const imagem =
+            document.getElementById("imagemHistoria");
+
+        const numero =
+            document.getElementById("numeroSlide");
+
+        const titulo =
+            document.getElementById("tituloHistoria");
+
+        const texto1 =
+            document.getElementById("textoHistoria");
+
+        const texto2 =
+            document.getElementById("textoHistoria2");
+
+        const destaque =
+            document.getElementById("destaque");
+
+        const textoDestaque =
+            document.getElementById("textoDestaque");
+
+        const pontos =
+            document.querySelectorAll(".ponto");
+
+
+        function mostrarSlide(numeroSlide) {
+
+            slideAtual = numeroSlide;
+
+            const slide = slides[slideAtual];
+
+
+            titulo.textContent =
+                slide.titulo;
+
+
+            texto1.textContent =
+                slide.texto1;
+
+
+            texto2.textContent =
+                slide.texto2;
+
+
+            destaque.textContent =
+                slide.destaque;
+
+
+            textoDestaque.textContent =
+                slide.textoDestaque;
+
+
+            numero.textContent =
+                "0" + (slideAtual + 1) +
+                " / " +
+                "0" + slides.length;
+
+
+            pontos.forEach((ponto, index) => {
+
+                ponto.classList.remove("ativo");
+
+                if (index === slideAtual) {
+
+                    ponto.classList.add("ativo");
+
+                }
+
+            });
+
+        }
+
+
+        function proximoSlide() {
+
+            slideAtual++;
+
+            if (slideAtual >= slides.length) {
+
+                slideAtual = 0;
+
+            }
+
+            mostrarSlide(slideAtual);
+
+        }
+
+
+        function voltarSlide() {
+
+            slideAtual--;
+
+            if (slideAtual < 0) {
+
+                slideAtual = slides.length - 1;
+
+            }
+
+            mostrarSlide(slideAtual);
+
+        }
+
+
+        /* TROCA AUTOMÁTICA */
+
+        setInterval(() => {
+
+            proximoSlide();
+
+        }, 7000);
+
+
+    </script>
+
+
+</body>
+
+</html>

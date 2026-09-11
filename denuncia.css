@@ -1,0 +1,492 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    /* Fundo principal — Pergaminho */
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(200, 162, 90, 0.10),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #F3EDE0,
+            #E8DDC8
+        );
+
+    color: #2B2B2B;
+
+    min-height: 100vh;
+
+    padding: 55px 20px 80px;
+
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   TÍTULO
+================================= */
+
+h1 {
+    max-width: 850px;
+
+    margin: 0 auto 25px;
+
+    text-align: center;
+
+    color: #6D2D3A;
+
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+
+    position: relative;
+}
+
+/* Pequeno detalhe dourado abaixo do título */
+
+h1::after {
+    content: "";
+
+    display: block;
+
+    width: 70px;
+    height: 3px;
+
+    margin: 16px auto 0;
+
+    background: #C8A25A;
+
+    border-radius: 10px;
+}
+
+
+/* ==============================
+   TEXTO PRINCIPAL
+================================= */
+
+body > p {
+    max-width: 850px;
+
+    margin: 0 auto 35px;
+
+    padding: 30px 32px;
+
+    /* Areia muito clara / efeito de papel */
+    background: rgba(255, 255, 255, 0.65);
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(109, 45, 58, 0.14);
+
+    box-shadow:
+        0 10px 30px rgba(43, 43, 43, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+    color: #2B2B2B;
+
+    font-size: 16px;
+
+    line-height: 1.85;
+}
+
+
+/* ==============================
+   ALERTA DE EMERGÊNCIA
+================================= */
+
+body > p::first-line {
+    font-weight: 700;
+    color: #6D2D3A;
+}
+
+
+/* ==============================
+   BOTÃO WHATSAPP / LIGUE 180
+================================= */
+
+.botao-ligue180 {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: fit-content;
+
+    margin: 28px auto;
+
+    padding: 15px 28px;
+
+    /* Rosa queimado — coragem */
+    background: linear-gradient(
+        135deg,
+        #A64D5A,
+        #6D2D3A
+    );
+
+    color: #F3EDE0;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    line-height: 1.4;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(200, 162, 90, 0.45);
+
+    box-shadow:
+        0 7px 18px rgba(109, 45, 58, 0.22);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Hover */
+
+.botao-ligue180:hover {
+    background: linear-gradient(
+        135deg,
+        #6D2D3A,
+        #A64D5A
+    );
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 11px 25px rgba(109, 45, 58, 0.28);
+}
+
+
+/* Clique */
+
+.botao-ligue180:active {
+    transform: translateY(0);
+}
+
+
+/* ==============================
+   FORMULÁRIO
+================================= */
+
+form {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 38px;
+
+    /* Card — Areia Antiga */
+    background:
+        linear-gradient(
+            145deg,
+            rgba(216, 200, 169, 0.72),
+            rgba(243, 237, 224, 0.88)
+        );
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(109, 45, 58, 0.15);
+
+    box-shadow:
+        0 12px 35px rgba(43, 43, 43, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.55);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* Pequeno detalhe no topo do formulário */
+
+form::before {
+    content: "";
+
+    width: 55px;
+    height: 4px;
+
+    margin: 0 auto 8px;
+
+    background: #C8A25A;
+
+    border-radius: 10px;
+}
+
+
+/* ==============================
+   LABEL
+================================= */
+
+form label {
+    color: #6D2D3A;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+    margin-top: 5px;
+}
+
+
+/* ==============================
+   ÁREA DE TEXTO
+================================= */
+
+textarea {
+    width: 100%;
+
+    min-height: 180px;
+
+    padding: 17px;
+
+    resize: vertical;
+
+    border: 2px solid #D8C8A9;
+
+    border-radius: 14px;
+
+    /* Pergaminho */
+    background-color: #F3EDE0;
+
+    color: #2B2B2B;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+
+/* Placeholder */
+
+textarea::placeholder {
+    color: #6B6E4E;
+
+    opacity: 0.75;
+}
+
+
+/* Quando clicar na caixa */
+
+textarea:focus {
+    border-color: #A64D5A;
+
+    background-color: #fffaf1;
+
+    box-shadow:
+        0 0 0 4px rgba(200, 154, 160, 0.28);
+}
+
+
+/* ==============================
+   BOTÃO CONTINUAR
+================================= */
+
+form button {
+    align-self: center;
+
+    min-width: 210px;
+
+    margin-top: 18px;
+
+    padding: 15px 35px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    /* Rosa Queimado */
+    background: linear-gradient(
+        135deg,
+        #A64D5A,
+        #6D2D3A
+    );
+
+    color: #F3EDE0;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    border: 1px solid rgba(200, 162, 90, 0.45);
+
+    box-shadow:
+        0 7px 18px rgba(109, 45, 58, 0.22);
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* Hover */
+
+form button:hover {
+    background: linear-gradient(
+        135deg,
+        #6D2D3A,
+        #A64D5A
+    );
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 11px 25px rgba(109, 45, 58, 0.28);
+}
+
+
+/* Clique */
+
+form button:active {
+    transform: translateY(0);
+
+    box-shadow:
+        0 4px 10px rgba(109, 45, 58, 0.18);
+}
+
+
+/* ==============================
+   ACESSIBILIDADE
+================================= */
+
+.botao-ligue180:focus-visible,
+form button:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #C8A25A;
+
+    outline-offset: 4px;
+}
+
+
+/* ==============================
+   SELEÇÃO DE TEXTO
+================================= */
+
+::selection {
+    background: #C89AA0;
+
+    color: #2B2B2B;
+}
+
+
+/* ==============================
+   CELULAR
+================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 35px 15px 55px;
+    }
+
+
+    h1 {
+        font-size: 31px;
+
+        margin-bottom: 20px;
+    }
+
+
+    h1::after {
+        width: 55px;
+
+        margin-top: 12px;
+    }
+
+
+    body > p {
+        padding: 23px 20px;
+
+        font-size: 15px;
+
+        line-height: 1.75;
+
+        margin-bottom: 25px;
+
+        border-radius: 16px;
+    }
+
+
+    .botao-ligue180 {
+        width: 100%;
+
+        padding: 15px 18px;
+
+        text-align: center;
+
+        font-size: 15px;
+    }
+
+
+    form {
+        padding: 27px 20px;
+
+        border-radius: 17px;
+    }
+
+
+    form label {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+
+    textarea {
+        min-height: 160px;
+
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    form button {
+        width: 100%;
+
+        max-width: 320px;
+    }
+}
+

@@ -1,0 +1,488 @@
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(200, 154, 160, 0.25),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(200, 162, 90, 0.12),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #f3ede0,
+            #e8ddca
+        );
+
+    color: #2b2b2b;
+
+    min-height: 100vh;
+
+    padding: 50px 20px 70px;
+
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   CONTEÚDO PRINCIPAL
+================================= */
+
+.resultado {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* ==============================
+   TÍTULO PRINCIPAL
+================================= */
+
+.resultado h1 {
+    max-width: 850px;
+
+    margin: 0 auto 25px;
+
+    text-align: center;
+
+    color: #6d2d3a;
+
+    font-size: 38px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* ==============================
+   TEXTO DESTAQUE
+================================= */
+
+.destaque {
+    max-width: 750px;
+
+    margin: 0 auto 35px;
+
+    padding: 22px 28px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.8),
+        rgba(216, 200, 169, 0.45)
+    );
+
+    border-left: 5px solid #a64d5a;
+
+    border-radius: 15px;
+
+    color: #4a3a3d;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    box-shadow:
+        0 6px 20px rgba(77, 40, 48, 0.10);
+
+    border-top: 1px solid rgba(200, 162, 90, 0.25);
+}
+
+
+/* ==============================
+   SEÇÕES
+================================= */
+
+.informacao,
+.atencao,
+.ajuda {
+    max-width: 850px;
+
+    margin: 0 auto 30px;
+
+    padding: 30px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(243, 237, 224, 0.95),
+        rgba(216, 200, 169, 0.55)
+    );
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(109, 45, 58, 0.16);
+
+    box-shadow:
+        0 7px 22px rgba(77, 40, 48, 0.10);
+}
+
+
+/* ==============================
+   TÍTULOS DAS SEÇÕES
+================================= */
+
+.informacao h2,
+.atencao h2,
+.ajuda h2 {
+    color: #6d2d3a;
+
+    font-size: 23px;
+
+    line-height: 1.4;
+
+    margin-bottom: 20px;
+
+    position: relative;
+
+    padding-bottom: 8px;
+}
+
+.informacao h2::after,
+.atencao h2::after,
+.ajuda h2::after {
+    content: "";
+
+    display: block;
+
+    width: 45px;
+
+    height: 2px;
+
+    margin-top: 7px;
+
+    background: #c8a25a;
+
+    border-radius: 5px;
+}
+
+
+/* ==============================
+   PARÁGRAFOS
+================================= */
+
+.informacao p,
+.atencao p,
+.ajuda p {
+    color: #3f3436;
+
+    font-size: 16px;
+
+    line-height: 1.85;
+
+    margin-bottom: 18px;
+}
+
+
+/* Remove o espaço do último parágrafo */
+
+.informacao p:last-child,
+.atencao p:last-child,
+.ajuda p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==============================
+   ÁREA DE ATENÇÃO
+================================= */
+
+.atencao {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(200, 154, 160, 0.28),
+            rgba(243, 237, 224, 0.92)
+        );
+
+    border-left: 5px solid #a64d5a;
+
+    border-top: 1px solid rgba(166, 77, 90, 0.15);
+}
+
+
+/* Título da área de atenção */
+
+.atencao h2 {
+    color: #6d2d3a;
+}
+
+
+/* ==============================
+   ÁREA DOS BOTÕES
+================================= */
+
+.botoes {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+    margin-top: 28px;
+}
+
+
+/* ==============================
+   BOTÕES
+================================= */
+
+.botao {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 200px;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    line-height: 1.4;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+/* ==============================
+   BOTÃO PRINCIPAL
+================================= */
+
+.botao.principal {
+    background: linear-gradient(
+        135deg,
+        #a64d5a,
+        #6d2d3a
+    );
+
+    color: #f3ede0;
+
+    border: 1px solid #6d2d3a;
+
+    box-shadow:
+        0 6px 16px rgba(109, 45, 58, 0.22);
+}
+
+
+/* Efeito ao passar o mouse */
+
+.botao.principal:hover {
+    background: linear-gradient(
+        135deg,
+        #6d2d3a,
+        #a64d5a
+    );
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 20px rgba(109, 45, 58, 0.28);
+}
+
+
+/* ==============================
+   BOTÃO SECUNDÁRIO
+================================= */
+
+.botao.secundario {
+    background-color: rgba(243, 237, 224, 0.75);
+
+    color: #6d2d3a;
+
+    border: 2px solid #a64d5a;
+}
+
+
+/* Efeito ao passar o mouse */
+
+.botao.secundario:hover {
+    background-color: #a64d5a;
+
+    color: #f3ede0;
+
+    border-color: #a64d5a;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 7px 16px rgba(109, 45, 58, 0.18);
+}
+
+
+/* ==============================
+   TEXTO FINAL
+================================= */
+
+.final {
+    max-width: 750px;
+
+    margin: 35px auto 0;
+
+    text-align: center;
+
+    color: #6b6e4e;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* ==============================
+   ACESSIBILIDADE
+================================= */
+
+.botao:focus-visible {
+    outline: 3px solid rgba(200, 162, 90, 0.65);
+
+    outline-offset: 4px;
+}
+
+
+/* ==============================
+   CELULAR
+================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 30px 15px 50px;
+    }
+
+
+    /* Título */
+
+    .resultado h1 {
+        font-size: 30px;
+
+        line-height: 1.3;
+
+        margin-bottom: 20px;
+
+        text-align: center;
+    }
+
+
+    /* Texto de destaque */
+
+    .destaque {
+        padding: 20px;
+
+        font-size: 15px;
+
+        line-height: 1.8;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* Seções */
+
+    .informacao,
+    .atencao,
+    .ajuda {
+        padding: 23px 20px;
+
+        border-radius: 17px;
+
+        margin-bottom: 20px;
+    }
+
+
+    /* Títulos das seções */
+
+    .informacao h2,
+    .atencao h2,
+    .ajuda h2 {
+        font-size: 20px;
+
+        line-height: 1.45;
+
+        margin-bottom: 17px;
+    }
+
+
+    /* Parágrafos */
+
+    .informacao p,
+    .atencao p,
+    .ajuda p {
+        font-size: 15px;
+
+        line-height: 1.8;
+
+        margin-bottom: 17px;
+    }
+
+
+    /* Botões */
+
+    .botoes {
+        flex-direction: column;
+
+        gap: 12px;
+
+        margin-top: 25px;
+    }
+
+
+    .botao {
+        width: 100%;
+
+        max-width: 320px;
+
+        min-width: 0;
+    }
+
+
+    /* Texto final */
+
+    .final {
+        font-size: 14px;
+
+        line-height: 1.8;
+
+        margin-top: 25px;
+    }
+}

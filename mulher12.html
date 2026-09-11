@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Tarsila do Amaral</title>
+
+    <link rel="stylesheet" href="historias.css">
+
+</head>
+
+
+<body>
+
+    <main class="pagina">
+
+        <div class="conteudo">
+
+            <header class="cabecalho">
+
+                <div>
+                    <h1>Tarsila do Amaral</h1>
+                    <p>Uma história para conhecer</p>
+                </div>
+
+            </header>
+
+
+            <section class="historia">
+
+                <!-- IMAGEM -->
+
+                <div class="lado-imagem">
+
+                    <div class="imagem-container">
+
+                        <img
+                            id="imagemHistoria"
+                            src="https://awarewomenartists.com/wp-content/uploads/2018/12/portrait_tarsila-do-amaral_2_aware_women-artists_artistes-femmes.jpg"
+                            alt="Tarsila do Amaral"
+                        >
+
+
+                        <div class="indicadores">
+
+                            <span class="ponto ativo"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+                            <span class="ponto"></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TEXTO -->
+
+                <div class="texto-historia">
+
+                    <div
+                        class="numero"
+                        id="numeroSlide"
+                    >
+                        01 / 05
+                    </div>
+
+
+                    <h2 id="tituloHistoria">
+                        Quem foi Tarsila do Amaral?
+                    </h2>
+
+
+                    <p id="textoHistoria">
+                        Tarsila do Amaral foi uma das artistas mais
+                        importantes do modernismo brasileiro.
+                        Nascida em 1886, no interior de São Paulo,
+                        cresceu em uma família ligada à produção de café.
+                    </p>
+
+
+                    <p id="textoHistoria2">
+                        Recebeu uma educação privilegiada e estudou
+                        arte no Brasil e no exterior, entrando em
+                        contato com diferentes movimentos artísticos.
+                    </p>
+
+
+                    <div class="informacao">
+
+                        <strong id="destaque">
+                            Uma artista pioneira
+                        </strong>
+
+                        <p id="textoDestaque">
+                            Tarsila ajudou a construir uma arte moderna
+                            que valorizava elementos da cultura e da
+                            identidade brasileira.
+                        </p>
+
+                    </div>
+
+
+                    <div class="controles">
+
+                        <button
+                            class="botao-anterior"
+                            onclick="voltarSlide()"
+                        >
+                            ← Anterior
+                        </button>
+
+
+                        <button
+                            class="botao-proximo"
+                            onclick="proximoSlide()"
+                        >
+                            Próximo →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- NAVEGAÇÃO -->
+
+        <nav class="barra-navegacao">
+
+            <a
+                href="historias.html"
+                class="nav-item ativo"
+            >
+                <span>⌂</span>
+                <small>Início</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>⌕</span>
+                <small>Buscar</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="botao-central"
+            >
+                +
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>♡</span>
+                <small>Favoritos</small>
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+                <span>☰</span>
+                <small>Sobre</small>
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const slides = [
+
+            {
+                imagem:
+                    "https://awarewomenartists.com/wp-content/uploads/2018/12/portrait_tarsila-do-amaral_2_aware_women-artists_artistes-femmes.jpg",
+
+                titulo:
+                    "Quem foi Tarsila do Amaral?",
+
+                texto:
+                    "Tarsila do Amaral foi uma das artistas mais importantes do modernismo brasileiro. Nascida em 1886, no interior de São Paulo, cresceu em uma família ligada à produção de café.",
+
+                texto2:
+                    "Recebeu uma educação privilegiada e estudou arte no Brasil e no exterior, entrando em contato com diferentes movimentos artísticos.",
+
+                destaque:
+                    "Uma artista pioneira",
+
+                textoDestaque:
+                    "Tarsila ajudou a construir uma arte moderna que valorizava elementos da cultura e da identidade brasileira."
+            },
+
+
+            {
+                imagem:
+                    "https://awarewomenartists.com/wp-content/uploads/2018/12/portrait_tarsila-do-amaral_2_aware_women-artists_artistes-femmes.jpg",
+
+                titulo:
+                    "Paris e o Modernismo",
+
+                texto:
+                    "Tarsila estudou em Barcelona e posteriormente em Paris, onde entrou em contato com movimentos artísticos europeus, especialmente o Cubismo.",
+
+                texto2:
+                    "Ao retornar ao Brasil, passou a misturar as influências que havia conhecido na Europa com cores, paisagens, personagens e elementos da cultura brasileira.",
+
+                destaque:
+                    "Arte brasileira moderna",
+
+                textoDestaque:
+                    "Sua produção ajudou a criar uma linguagem artística moderna que não abandonava as referências nacionais."
+            },
+
+
+            {
+                imagem:
+                    "https://awarewomenartists.com/wp-content/uploads/2018/12/portrait_tarsila-do-amaral_2_aware_women-artists_artistes-femmes.jpg",
+
+                titulo:
+                    "Abaporu e o Movimento Antropofágico",
+
+                texto:
+                    "Em 1928, Tarsila pintou Abaporu, uma de suas obras mais famosas. A pintura foi dada como presente de aniversário a Oswald de Andrade.",
+
+                texto2:
+                    "A obra inspirou Oswald a escrever o Manifesto Antropófago e tornou-se um dos símbolos mais conhecidos do modernismo brasileiro.",
+
+                destaque:
+                    "Abaporu",
+
+                textoDestaque:
+                    "O nome Abaporu vem do tupi e é geralmente traduzido como 'homem que come gente', relacionando-se à ideia antropofágica de absorver influências e transformá-las."
+            },
+
+
+            {
+                imagem:
+                    "https://awarewomenartists.com/wp-content/uploads/2018/12/portrait_tarsila-do-amaral_2_aware_women-artists_artistes-femmes.jpg",
+
+                titulo:
+                    "A arte e os temas sociais",
+
+                texto:
+                    "Tarsila também passou a abordar questões sociais em sua produção. A obra Operários, de 1933, representa trabalhadores diante de um cenário industrial.",
+
+                texto2:
+                    "Essa fase mostrou uma mudança importante em sua produção, aproximando sua arte de questões relacionadas à industrialização e às desigualdades sociais.",
+
+                destaque:
+                    "Operários",
+
+                textoDestaque:
+                    "A obra tornou-se uma das representações mais conhecidas da industrialização e da diversidade da classe trabalhadora brasileira."
+            },
+
+
+            {
+                imagem:
+                    "https://awarewomenartists.com/wp-content/uploads/2018/12/portrait_tarsila-do-amaral_2_aware_women-artists_artistes-femmes.jpg",
+
+                titulo:
+                    "O legado de Tarsila",
+
+                texto:
+                    "Tarsila do Amaral morreu em 1973, deixando uma das contribuições mais importantes para a arte moderna brasileira.",
+
+                texto2:
+                    "Sua obra continua sendo estudada e admirada, especialmente por sua capacidade de unir influências internacionais com elementos da cultura brasileira.",
+
+                destaque:
+                    "Um legado brasileiro",
+
+                textoDestaque:
+                    "Tarsila ajudou a transformar a maneira como o Brasil poderia ser representado na arte moderna, tornando-se uma referência para gerações de artistas."
+            }
+
+        ];
+
+
+        let slideAtual = 0;
+
+
+        const numero =
+            document.getElementById("numeroSlide");
+
+        const titulo =
+            document.getElementById("tituloHistoria");
+
+        const texto =
+            document.getElementById("textoHistoria");
+
+        const texto2 =
+            document.getElementById("textoHistoria2");
+
+        const destaque =
+            document.getElementById("destaque");
+
+        const textoDestaque =
+            document.getElementById("textoDestaque");
+
+        const pontos =
+            document.querySelectorAll(".ponto");
+
+
+        function mostrarSlide(indice) {
+
+            slideAtual =
+                (indice + slides.length) % slides.length;
+
+
+            const slide =
+                slides[slideAtual];
+
+
+            imagem.style.opacity = "0";
+
+
+            setTimeout(() => {
+
+                imagem.src = slide.imagem;
+
+                imagem.alt = slide.titulo;
+
+                imagem.style.opacity = "1";
+
+            }, 250);
+
+
+            numero.textContent =
+                "0" +
+                (slideAtual + 1) +
+                " / 0" +
+                slides.length;
+
+
+            titulo.textContent =
+                slide.titulo;
+
+
+            texto.textContent =
+                slide.texto;
+
+
+            texto2.textContent =
+                slide.texto2;
+
+
+            destaque.textContent =
+                slide.destaque;
+
+
+            textoDestaque.textContent =
+                slide.textoDestaque;
+
+
+            pontos.forEach((ponto, index) => {
+
+                ponto.classList.toggle(
+                    "ativo",
+                    index === slideAtual
+                );
+
+            });
+
+        }
+
+
+        function proximoSlide() {
+
+            mostrarSlide(
+                slideAtual + 1
+            );
+
+        }
+
+
+        function voltarSlide() {
+
+            mostrarSlide(
+                slideAtual - 1
+            );
+
+        }
+
+
+        /* TROCA AUTOMÁTICA A CADA 7 SEGUNDOS */
+
+        setInterval(() => {
+
+            proximoSlide();
+
+        }, 7000);
+
+    </script>
+
+</body>
+
+</html>

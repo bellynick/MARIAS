@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marias</title>
+
+    <link rel="stylesheet" href="historias.css">
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <div class="conteudo">
+
+            <!-- CABEÇALHO -->
+            <header class="cabecalho">
+
+                <div>
+                    <h1>Marias</h1>
+                    <p>Qual mulher importante você quer conhecer hoje?</p>
+                </div>
+
+                <!-- BOTÃO DE PERFIL -->
+                <div class="acoes-cabecalho">
+
+                    <a href="perfil.html"
+                       class="botao-perfil"
+                       title="Perfil"
+                       aria-label="Acessar perfil">
+
+                        <span>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round">
+
+                                <circle cx="12" cy="8" r="4"></circle>
+
+                                <path d="M4 21c0-4 3.5-7 8-7s8 3 8 7"></path>
+
+                            </svg>
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </header>
+
+
+            <!-- HISTÓRIA PRINCIPAL -->
+            <section class="historia-principal">
+
+                <div class="carrossel">
+
+                    <!-- BOTÃO ANTERIOR -->
+                    <button
+                        class="seta esquerda"
+                        id="anterior"
+                        type="button"
+                        aria-label="História anterior">
+
+                        &#10094;
+
+                    </button>
+
+
+                    <!-- SLIDE 1 -->
+                    <div class="slide ativo">
+
+                        <img
+                            src="imagens/mulher1.jpg"
+                            alt="Mulher1">
+
+
+                        <div class="informacoes-slide">
+
+                            <h2>“Liberdade é pouco. O que eu desejo ainda não tem nome.” - Clarice Lispector</h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SLIDE 2 -->
+                    <div class="slide">
+
+                        <img
+                            src="imagens/mulher2.jpg"
+                            alt="Mulher 2">
+
+                        <div class="informacoes-slide">
+
+                            <h2>“Pés, para que os quero, se tenho asas para voar?” - Frida Kahlo</h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SLIDE 3 -->
+                    <div class="slide">
+
+                        <img
+                            src="imagens/mulher3.jpg"
+                            alt="Mulher 3">
+
+                        <div class="informacoes-slide">
+
+                            <h2>“Não se nasce mulher: torna-se mulher.” - Simone de Beauvoir</h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- SLIDE 4 -->
+                    <div class="slide">
+
+                        <img
+                            src="imagens/logo.jpeg"
+                            alt="Mulher 4">
+
+                        <div class="informacoes-slide">
+
+                            <h2>“Assim como a borboleta,tada mulher carrega em si a beleza de
+                                se transformar e a coragem de voar.” - Marias
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BOTÃO PRÓXIMO -->
+                    <button
+                        class="seta direita"
+                        id="proximo"
+                        type="button"
+                        aria-label="Próxima história">
+
+                        &#10095;
+
+                    </button>
+
+                </div>
+
+
+                <!-- INDICADORES -->
+                <div class="indicadores">
+
+                    <span class="indicador ativo"></span>
+                    <span class="indicador"></span>
+                    <span class="indicador"></span>
+                    <span class="indicador"></span>
+
+                </div>
+
+            </section>
+
+
+            <!-- TODAS AS HISTÓRIAS -->
+            <section class="outras-historias">
+
+                <h3>TODAS AS HISTÓRIAS</h3>
+
+
+                <div
+                    class="grade-historias"
+                    id="grade-historias">
+
+
+                    <!-- MULHER 1 -->
+                    <a
+                        class="card-historia"
+                        href="mulher1.html">
+
+                        <img
+                            src="imagens/mulhers1.jpg"
+                            alt="Margaret Thatcher">
+
+                        <h4>Margaret Thatcher</h4>
+
+                    </a>
+
+
+                    <!-- MULHER 2 -->
+                    <a
+                        class="card-historia"
+                        href="mulher2.html">
+
+                        <img
+                            src="imagens/mulhers2.jpg"
+                            alt="Joana d'Arc">
+
+                        <h4>Joana d'Arc</h4>
+
+                    </a>
+
+
+                    <!-- MULHER 3 -->
+                    <a
+                        class="card-historia"
+                        href="mulher3.html">
+
+                        <img
+                            src="imagens/mulhers3.png"
+                            alt="Princesa Diana">
+
+                        <h4>Princesa Diana</h4>
+
+                    </a>
+
+
+                    <!-- MULHER 4 -->
+                    <a
+                        class="card-historia"
+                        href="mulher4.html">
+
+                        <img
+                            src="imagens/mulhers4.jpg"
+                            alt="Rosalind Franklin">
+
+                        <h4>Rosalind Franklin</h4>
+
+                    </a>
+
+
+                    <!-- MULHER 5 -->
+                    <a
+                        class="card-historia"
+                        href="mulher5.html">
+
+                        <img
+                            src="imagens/mulher5.png"
+                            alt="Ada Lovelace">
+
+                        <h4>Ada Lovelace</h4>
+
+                    </a>
+
+
+                    <!-- MULHER 6 -->
+                    <a
+                        class="card-historia"
+                        href="mulher6.html">
+
+                        <img
+                            src="imagens/mulher6.png"
+                            alt="Katherine Johnson">
+
+                        <h4>Katherine Johnson</h4>
+
+                    </a>
+
+
+                    <!-- MULHER 7 -->
+                    <a
+                        class="card-historia"
+                        href="mulher7.html">
+
+                        <img
+                            src="imagens/mulher7.png"
+                            alt="Marielle Franco">
+
+                        <h4>Marielle Franco</h4>
+
+                    </a>
+
+
+                    <!-- MULHER 8 -->
+                    <a
+                        class="card-historia"
+                        href="mulher8.html">
+
+                        <img
+                            src="imagens/mulher8.png"
+                            alt="Tarana Burke">
+
+                        <h4>Tarana Burke</h4>
+
+                    </a>
+
+
+                    <!-- MULHER 9 -->
+                    <a
+                        class="card-historia"
+                        href="mulher9.html">
+
+                        <img
+                            src="imagens/mulher9.png"
+                            alt="Malala Yousafzai">
+
+                        <h4>Malala Yousafzai</h4>
+
+                    </a>
+
+
+                    <!-- MULHER 10 -->
+                    <a
+                        class="card-historia"
+                        href="mulher10.html">
+
+                        <img
+                            src="imagens/mulher10.png"
+                            alt="Melanie Klein">
+
+                        <h4>Melanie Klein</h4>
+
+                    </a>
+
+
+                    <!-- MULHER 11 -->
+                    <a
+                        class="card-historia"
+                        href="mulher11.html">
+
+                        <img
+                            src="imagens/mulher11.png"
+                            alt="Nise da Silveira">
+
+                        <h4>Nise da Silveira</h4>
+
+                    </a>
+
+
+                    <!-- MULHER 12 -->
+                    <a
+                        class="card-historia"
+                        href="mulher12.html">
+
+                        <img
+                            src="imagens/mulher12.jpg"
+                            alt="Tarsila do Amaral">
+
+                        <h4>Tarsila do Amaral</h4>
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+    
+        <!-- BORBOLETA -->
+
+<a
+    href="triagem.html"
+    class="borboleta"
+    aria-label="Triagem">
+
+    <svg
+        viewBox="0 0 120 120"
+        xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Asa esquerda superior -->
+
+        <path
+            class="asa superior"
+            d="M57 54
+               C48 25, 25 8, 13 19
+               C2 29, 10 51, 34 64
+               C43 69, 52 66, 57 60 Z"
+        />
+
+
+        <!-- Asa esquerda inferior -->
+
+        <path
+            class="asa inferior"
+            d="M55 61
+               C38 57, 18 63, 18 78
+               C18 91, 39 96, 56 75
+               C60 70, 59 64, 55 61 Z"
+        />
+
+
+        <!-- Asa direita superior -->
+
+        <path
+            class="asa superior"
+            d="M63 54
+               C72 25, 95 8, 107 19
+               C118 29, 110 51, 86 64
+               C77 69, 68 66, 63 60 Z"
+        />
+
+
+        <!-- Asa direita inferior -->
+
+        <path
+            class="asa inferior"
+            d="M65 61
+               C82 57, 102 63, 102 78
+               C102 91, 81 96, 64 75
+               C60 70, 61 64, 65 61 Z"
+        />
+
+
+        <!-- Detalhes das asas -->
+
+        <path
+            class="detalhe"
+            d="M51 50 C39 38, 27 31, 17 31"
+        />
+
+
+        <path
+            class="detalhe"
+            d="M48 57 C35 50, 24 47, 14 49"
+        />
+
+
+        <path
+            class="detalhe"
+            d="M69 50 C81 38, 93 31, 103 31"
+        />
+
+
+        <path
+            class="detalhe"
+            d="M72 57 C85 50, 96 47, 106 49"
+        />
+
+
+        <!-- Corpo -->
+
+        <ellipse
+            class="corpo"
+            cx="60"
+            cy="62"
+            rx="5"
+            ry="22"
+        />
+
+
+        <!-- Cabeça -->
+
+        <circle
+            class="cabeca"
+            cx="60"
+            cy="39"
+            r="5"
+        />
+
+
+        <!-- Antena esquerda -->
+
+        <path
+            class="antena"
+            d="M57 38 C51 29, 46 29, 43 25"
+        />
+
+
+        <!-- Antena direita -->
+
+        <path
+            class="antena"
+            d="M63 38 C69 29, 74 29, 77 25"
+        />
+
+
+        <!-- Pontinhas das antenas -->
+
+        <circle
+            class="ponta"
+            cx="43"
+            cy="25"
+            r="2"
+        />
+
+        <circle
+            class="ponta"
+            cx="77"
+            cy="25"
+            r="2"
+        />
+
+    </svg>
+
+</a>
+            
+        
+
+       
+<!-- BARRA DE NAVEGAÇÃO -->
+<nav class="barra-navegacao">
+
+    <!-- INÍCIO -->
+    <a href="historias.html" class="nav-item ativo">
+        <span>⌂</span>
+        <small>Início</small>
+    </a>
+
+
+    <!-- BUSCAR -->
+    <button
+        class="nav-item botao-buscar"
+        id="botao-pesquisa"
+        type="button">
+
+        <span>⌕</span>
+        <small>Buscar</small>
+
+    </button>
+
+
+    <!-- ÁREA DE PESQUISA -->
+    <div
+        class="area-pesquisa"
+        id="area-pesquisa">
+
+        <input
+            type="text"
+            id="campo-pesquisa"
+            placeholder="Pesquisar...">
+
+        <div
+            id="sugestoes"
+            class="sugestoes">
+        </div>
+
+        <button
+            id="enviar-pesquisa"
+            type="button">
+            Buscar
+        </button>
+
+        <button
+            id="fechar-pesquisa"
+            type="button">
+            Fechar
+        </button>
+
+    </div>
+
+
+    <!-- QUAL MARIA VOCÊ SERIA -->
+    <a
+        href="maria-quiz.html"
+        class="botao-central"
+        aria-label="Qual Maria você seria?">
+
+        +
+
+    </a>
+
+
+    <!-- LIVROS E FILMES -->
+    <a
+        href="marias-em-foco.html"
+        class="nav-item">
+
+        <span>♡</span>
+        <small>Livros e filmes</small>
+
+    </a>
+
+
+    <!-- SOBRE O SITE -->
+    <a
+        href="sobre.html"
+        class="nav-item">
+
+        <span>☰</span>
+        <small>Sobre</small>
+
+    </a>
+
+</nav>
+
+    </a>
+
+
+    <!-- LIVROS E FILMES -->
+    <a
+        href="livros.html"
+        class="nav-item">
+
+        <span>♡</span>
+        <small>Livros e filmes</small>
+
+    </a>
+
+
+    <!-- SOBRE O SITE -->
+    <a
+        href="sobre.html"
+        class="nav-item">
+
+        <span>☰</span>
+        <small>Sobre</small>
+
+    </a>
+
+</nav>
+
+            </a>
+
+        </nav>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="historias.js"></script>
+
+</body>
+
+</html>
